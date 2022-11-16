@@ -123,13 +123,13 @@ body {
 }
 
 .ui-input {
-  border: 2px solid rgb(195, 195, 195);
-  background-color: rgb(255, 255, 255);
-  border-radius: 2px;
-  padding: 0 10px;
-  height: 44px;
-  font-size: 16px;
-  color: #333;
+  border: 3px solid #b7bbc4;
+  background-color: #ffffff;
+  border-radius: 0;
+  padding: 0 18px;
+  height: 56px;
+  font-size: 14px;
+  color: #7a7f89;
   font-family: inherit;
   width: 100%;
   display: block;
@@ -148,12 +148,12 @@ body {
 }
 
 .ui-textarea {
-  border: 2px solid rgb(195, 195, 195);
-  background-color: rgb(255, 255, 255);
-  border-radius: 2px;
-  padding: 18px 10px;
-  font-size: 16px;
-  color: #333;
+  border: 3px solid #b7bbc4;
+  background-color: #ffffff;
+  border-radius: 0;
+  padding: 18px;
+  font-size: 14px;
+  color: #7a7f89;
   font-family: inherit;
   width: 100%;
   display: block;
@@ -232,147 +232,54 @@ body {
 }
 
 .ui-button-submit {
-  border: none;
+  background-color: rgb(244, 143, 0);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 22px 7px;
-  border-radius: 4px;
-  background: rgb(255, 220, 60);
-  box-shadow: inset 0px -3px 0px 0px #e2b914;
-  cursor: pointer;
-  transition: .3s ease;
-  transition-property: background, box-shadow;
-  font-weight: bold;
-  color: #333;
-  font-size: 18px;
-  line-height: 28px;
+  min-height: 56px;
+  border-radius: 28px;
   text-decoration: none;
-  transition: color .3s ease;
-  text-align: center;
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  min-width: 220px;
+  max-width: 100%;
+  padding: 0 24px;
 
   .ui-loader-square {
     font-size: 80%;
     margin-left: -6px;
     margin-right: 10px;
   }
+}
+
+.ui-button-submit_upper {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.16px;
 }
 
 .ui-button-submit:hover {
-  color: #000;
-  background: rgb(255, 189, 37);
-  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.32), inset 0px -3px 0px 0px #cc930f;
-}
-
-.ui-button-submit_glare::after {
-  content: '';
-  margin-left: 60px;
-  width: 30px;
-  height: 300px;
-  background: rgb(255, 220, 60);
-  animation-delay: 0.05s;
-  position: absolute;
-  left: -40px;
-  top: -150px;
-  animation-timing-function: ease-in-out;
-  animation-name: buttonGlare;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  transform: rotate(45deg);
-  mix-blend-mode: color;
-  filter: invert(100%);
-}
-
-.ui-button-secondary {
-  border: none;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 22px;
-  border: 1px solid rgb(255, 186, 25);
-  border-radius: 4px;
-  background-color: rgb(251, 187, 73);
-  box-shadow: 0px 6px 7px 0px rgba(0, 0, 0, 0.09);
-  cursor: pointer;
-  transition: .3s ease;
-  transition-property: background, box-shadow;
-  font-weight: bold;
-  color: #333;
-  font-size: 18px;
-  line-height: 28px;
-  letter-spacing: 0.025em;
-  transition: color .3s ease;
-  text-align: center;
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
-
-  .ui-loader-square {
-    font-size: 80%;
-    margin-left: -6px;
-    margin-right: 10px;
-  }
-
-  @include below(sm) {
-    font-size: 16px;
-    padding: 8px 18px;
-  }
-}
-
-.ui-button-secondary:hover {
-  color: #000;
-  background-color: rgb(255, 180, 6);
-  box-shadow: 0px 6px 7px 0px rgba(0, 0, 0, 0.28);
-}
-
-.ui-button-secondary_glare::after {
-  content: '';
-  margin-left: 60px;
-  width: 30px;
-  height: 300px;
-  background: rgb(255, 220, 60);
-  animation-delay: 0.05s;
-  position: absolute;
-  left: -40px;
-  top: -150px;
-  animation-timing-function: ease-in-out;
-  animation-name: buttonGlare;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  transform: rotate(45deg);
-  mix-blend-mode: color;
-  filter: invert(100%);
-}
-
-.ui-button-more {
-  border: 3px solid rgb(0, 80, 140);
-  background-color: rgba(109, 57, 38, 0);
-  border-radius: 3px;
-  text-align: center;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  color: rgb(0, 80, 140);
-  font-weight: bold;
-  line-height: 1.5;
-  letter-spacing: -0.005em;
+  background-image: linear-gradient(#ff7e00 0%, #d76a00 100%);
+  box-shadow: 4.286px 2.575px 9px 0px rgba(0, 0, 0, 0.28);
   text-decoration: none;
-  padding: 10px 30px;
-
-  @include below(sm) {
-    border-width: 2px;
-    font-size: 16px;
-    padding: 6px 18px;
-  }
 }
 
-.ui-button-more:hover {
-  border-color: #ff9900;
-  color: #f60;
+.ui-button-submit_with-arrow::after {
+  content: '';
+  margin-left: 14px;
+  margin-right: -8px;
+  display: block;
+  width: .6em;
+  height: .6em;
+  opacity: 0.8;
+  border-right: 0.2em solid currentColor;
+  border-bottom: 0.2em solid currentColor;
+  transform: rotate(-45deg);
 }
 
 .ui-arrow-right {
@@ -412,47 +319,58 @@ body {
 }
 
 .ui-input-file:hover .ui-input-file__icon {
-  background: rgb(228, 150, 30);
-  color: #fff;
+  background: #f67707;
 }
 
 .ui-input-file:hover .ui-input-file__label {
-  color: rgb(228, 150, 30);
+  border-color: #f67707;
 }
 
 .ui-input-file__icon {
-  width: 25px;
-  height: 25px;
+  width: 36px;
+  height: 36px;
   flex-shrink: 0;
   display: flex;
-  background: #0a6fad;
+  background-color: #2f3f49;
   border-radius: 50%;
-  margin-right: 8px;
   align-items: center;
   justify-content: center;
-  color: #ccc;
+  color: #587384;
+  margin: -3px 7px -3px -23px;
 }
 
 .ui-input-file__icon svg {
   display: block;
   fill: currentColor;
+  width: 20px;
+  height: 20px;
 }
 
 .ui-input-file__label {
   font-size: 14px;
   font-weight: bold;
-  color: #0a6fad;
+  color: currentColor;
   line-height: 1;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  height: 36px;
+  border-radius: 18px;
+  border: 3px solid #2f3f49;
+  background-color: transparent;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ui-input-file__desc {
-  margin-left: 16px;
+  margin-left: 14px;
   font-style: italic;
-  font-size: 12px;
-  color: #5e5e5e;
+  color: currentColor;
+  opacity: 0.8;
+  font-size: 14px;
+  font-weight: 300;
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -468,7 +386,7 @@ body {
 
 .ui-rules {
   font-size: 12px;
-  line-height: 14px;
+  line-height: 18px;
   color: currentColor;
   position: relative;
   padding-left: 26px;

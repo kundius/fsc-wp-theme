@@ -74,8 +74,8 @@
   flex-grow: 0;
   background: #fff;
   width: 640px;
-  padding: 20px;
-  border-radius: 4px;
+  padding: 32px;
+  border-radius: 0;
   max-width: calc(100% - 16px);
   overflow: visible;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
@@ -89,7 +89,7 @@
 }
 
 .hystmodal--small .hystmodal__window {
-  width: 340px;
+  width: 420px;
 }
 
 .hystmodal--order .hystmodal__window {
@@ -153,30 +153,29 @@
 .hystmodal__close {
   position: absolute;
   z-index: 20;
-  right: 4px;
-  top: 4px;
-  width: 28px;
-  height: 28px;
+  right: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  color: #999;
+  color: #fff;
   padding: 0;
   border: none;
   cursor: pointer;
-  background: transparent;
+  background: #a6a6a6;
 
   &:hover {
-    background: #c9d7e0;
-    color: #000;
+    background: #4c4c4c;
+    color: #fff;
   }
 }
 
 .hystmodal__close::before {
   content: '';
   position: absolute;
-  width: 16px;
+  width: 20px;
   height: 2px;
   background: currentColor;
   position: absolute;
@@ -188,7 +187,7 @@
 .hystmodal__close::after {
   content: '';
   position: absolute;
-  width: 16px;
+  width: 20px;
   height: 2px;
   background: currentColor;
   position: absolute;
@@ -203,19 +202,28 @@
 
 .modal-form__title {
   font-size: 24px;
-  color: #333;
+  color: #000;
   text-align: center;
   font-weight: bold;
   line-height: 1;
-  margin-bottom: 16px;
+  margin-bottom: 25px;
+}
+
+.modal-form__title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 5px;
+  background-color: #94b8e0;
+  margin: 16px auto 0;
 }
 
 .modal-form__field + .modal-form__field {
-  margin-top: 7px;
+  margin-top: 10px;
 }
 
 .modal-form__file {
-  margin-top: 7px;
+  margin-top: 10px;
 }
 
 .modal-form__note {

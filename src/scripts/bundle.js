@@ -5,7 +5,6 @@
 
 import "./home";
 import "./modal";
-import "./modalAttachment";
 import "./form";
 import "./drawer";
 import "./menuScrollTo";
