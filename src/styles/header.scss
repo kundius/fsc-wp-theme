@@ -165,8 +165,10 @@
   list-style: none;
   
   @include below(md) {
+    position: absolute;
+    left: 0;
+    top: 100%;
     width: 100%;
-    justify-content: space-between;
   }
 }
 
