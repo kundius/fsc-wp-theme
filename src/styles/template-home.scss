@@ -388,6 +388,11 @@
   background: #4b6272;
   padding-top: 92px;
   padding-bottom: 155px;
+
+  @include below(lg) {
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
 }
 
 .home-advantages__title {
@@ -396,6 +401,10 @@
   line-height: 1;
   font-weight: bold;
   margin-bottom: 149px;
+
+  @include below(lg) {
+    margin-bottom: 120px;
+  }
 }
 
 .home-advantages__list {
@@ -424,6 +433,11 @@
   @include below(xl) {
     padding-left: 25px;
     padding-top: 25px;
+    min-height: 260px;
+  }
+
+  @include below(lg) {
+    min-height: 240px;
   }
 }
 
@@ -455,6 +469,13 @@
   line-height: 1;
   font-weight: bold;
   border-radius: 50%;
+
+  @include below(lg) {
+    width: 84px;
+    height: 84px;
+    top: -42px;
+    margin-left: -42px;
+  }
 }
 
 .home-advantages-card__title {
@@ -463,6 +484,10 @@
   color: #344753;
   line-height: 1.2;
   text-align: center;
+
+  @include below(lg) {
+    font-size: 16px;
+  }
 }
 
 .home-news {
