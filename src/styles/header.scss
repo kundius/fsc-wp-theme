@@ -63,7 +63,7 @@
     }
   }
 
-  @include above(sm) {
+  @include above(md) {
     display: none;
   }
 }
