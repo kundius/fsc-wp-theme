@@ -407,6 +407,11 @@
   flex-wrap: wrap;
   margin-left: -50px;
   margin-top: -50px;
+
+  @include below(xl) {
+    margin-left: -25px;
+    margin-top: -25px;
+  }
 }
 
 .home-advantages-list__item {
@@ -415,6 +420,11 @@
   padding-top: 50px;
   min-height: 311px;
   display: flex;
+
+  @include below(xl) {
+    padding-left: 25px;
+    padding-top: 25px;
+  }
 }
 
 .home-advantages-card {
@@ -517,11 +527,16 @@
 }
 
 .home-news-card__image {
-  display: block;
+  display: flex;
   margin: 0;
   transform-origin: 50% 100%;
   transition: .5s ease-in-out;
   transition-property: transform;
+}
+
+.home-news-card__image img {
+  display: block;
+  width: 100%;
 }
 
 .home-news-card__body {
