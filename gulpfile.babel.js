@@ -12,6 +12,7 @@ import imagemin from "gulp-imagemin";
 import del from "del";
 import webpack from "webpack-stream";
 import named from "vinyl-named";
+import concat from "gulp-concat";
 
 const server = browserSync.create();
 const PRODUCTION = yargs.argv.prod;
@@ -19,19 +20,20 @@ const sass = gulpSass(dartSass);
 
 export const stylesTask = () => {
   return src([
-    "src/styles/bundle.scss",
     "node_modules/normalize.css/normalize.css",
     "node_modules/swiper/swiper-bundle.min.css",
     "node_modules/swiper/modules/pagination/pagination.min.css",
     "node_modules/swiper/modules/effect-fade/effect-fade.min.css",
     "node_modules/swiper/modules/thumbs/thumbs.min.css",
     "node_modules/swiper/modules/navigation/navigation.min.css",
+    "src/styles/bundle.scss",
   ])
     .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
     .pipe(sass().on("error", sass.logError))
     .pipe(gulpif(PRODUCTION, postcss([autoprefixer])))
     .pipe(gulpif(PRODUCTION, cleanCss({ compatibility: "ie8" })))
     .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
+    .pipe(concat('bundle.css'))
     .pipe(dest("dist/styles"))
     .pipe(server.stream());
 };
