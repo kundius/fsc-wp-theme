@@ -28,9 +28,6 @@
 }
 
 .header__toggle {
-  order: 0;
-  margin-right: auto;
-  margin-left: 8px;
   width: 48px;
   height: 48px;
   padding: 0;
@@ -65,14 +62,19 @@
   @include above(md) {
     display: none;
   }
+
+  @include below(md) {
+    margin-right: calc(220px - 48px);
+  }
 }
 
 .header__logo {
   min-width: 220px;
 
   @include below(md) {
-    order: -1;
     min-width: initial;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -110,6 +112,10 @@
   color: #fff;
   text-decoration: none;
   margin-top: 1px;
+
+  @include below(md) {
+    font-size: 18px;
+  }
 }
 
 .header-contacts__phone:hover {
@@ -132,6 +138,10 @@
   width: 15px;
   height: 11px;
   margin-right: 10px;
+
+  @include below(md) {
+    margin-right: 0;
+  }
 }
 
 .header-contacts__email:hover {

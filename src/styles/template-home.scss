@@ -42,6 +42,10 @@
   align-items: center;
   position: relative;
   z-index: 20;
+
+  @include below(md) {
+    height: 680px;
+  }
 }
 
 .intro-logo {
@@ -77,8 +81,8 @@
   }
 
   @include below(md) {
-    width: calc(804px * 0.5);
-    height: calc(261px * 0.5);
+    width: calc(804px * 0.6);
+    height: calc(261px * 0.6);
   }
 }
 
@@ -125,7 +129,7 @@
   }
 
   @include below(md) {
-    font-size: 56px;
+    font-size: 60px;
   }
 }
 
