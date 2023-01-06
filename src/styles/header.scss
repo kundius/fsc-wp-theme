@@ -164,8 +164,7 @@
   cursor: pointer;
 
   @include below(md) {
-    margin-left: 12px;
-    margin-right: 0;
+    display: none;
   }
 }
 
