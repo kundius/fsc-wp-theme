@@ -316,6 +316,10 @@ body {
   display: inline-flex;
   align-items: center;
   max-width: 100%;
+
+  @include below(md) {
+    flex-direction: column;
+  }
 }
 
 .ui-input-file:hover .ui-input-file__icon {
@@ -364,6 +368,13 @@ body {
   justify-content: center;
 }
 
+.ui-input-file__filename {
+  width: 125px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .ui-input-file__desc {
   margin-left: 14px;
   font-style: italic;
@@ -373,6 +384,11 @@ body {
   font-weight: 300;
   white-space: nowrap;
   flex-shrink: 0;
+
+  @include below(md) {
+    margin-left: 0;
+    margin-top: 8px;
+  }
 }
 
 .ui-input-file__input {
