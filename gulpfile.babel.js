@@ -18,7 +18,15 @@ const PRODUCTION = yargs.argv.prod;
 const sass = gulpSass(dartSass);
 
 export const stylesTask = () => {
-  return src("src/styles/bundle.scss")
+  return src([
+    "src/styles/bundle.scss",
+    "node_modules/normalize.css/normalize.css",
+    "node_modules/swiper/swiper-bundle.min.css",
+    "node_modules/swiper/modules/pagination/pagination.min.css",
+    "node_modules/swiper/modules/effect-fade/effect-fade.min.css",
+    "node_modules/swiper/modules/thumbs/thumbs.min.css",
+    "node_modules/swiper/modules/navigation/navigation.min.css",
+  ])
     .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
     .pipe(sass().on("error", sass.logError))
     .pipe(gulpif(PRODUCTION, postcss([autoprefixer])))
@@ -58,8 +66,7 @@ export const imagesTask = () => {
 };
 
 export const fontsTask = () => {
-  return src("src/fonts/**/*.{ttf,woff,woff2}")
-    .pipe(dest("dist/fonts"));
+  return src("src/fonts/**/*.{ttf,woff,woff2}").pipe(dest("dist/fonts"));
 };
 
 export const cleanTask = () => del(["dist"]);
