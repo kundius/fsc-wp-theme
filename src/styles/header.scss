@@ -28,18 +28,17 @@
 }
 
 .header__toggle {
-  width: 36px;
-  height: 36px;
-  position: absolute;
-  left: 8px;
-  top: 50%;
-  transform: translateY(-50%);
+  order: 0;
+  margin-right: auto;
+  margin-left: 8px;
   width: 48px;
   height: 48px;
   padding: 0;
   border: none;
-  background: transparent;
+  background: 0 0;
   cursor: pointer;
+  position: relative;
+  color: #fff;
 
   &:hover {
     background: rgba(62, 162, 228, 0.22);
@@ -48,7 +47,7 @@
   span {
     width: 24px;
     height: 4px;
-    background: #0d5c97;
+    background: currentColor;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -70,6 +69,11 @@
 
 .header__logo {
   min-width: 220px;
+
+  @include below(md) {
+    order: -1;
+    min-width: initial;
+  }
 }
 
 .header__logo a {
