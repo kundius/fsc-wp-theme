@@ -65,7 +65,7 @@
   }
 
   @include below(md) {
-    margin-right: calc(220px - 48px);
+    margin-right: calc(190px - 48px);
   }
 }
 
@@ -95,6 +95,7 @@
   min-width: 220px;
 
   @include below(md) {
+    min-width: 190px;
     align-items: center;
   }
 }
