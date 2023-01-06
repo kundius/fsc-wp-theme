@@ -75,6 +75,11 @@
     width: calc(804px * 0.8);
     height: calc(261px * 0.8);
   }
+
+  @include below(md) {
+    width: calc(804px * 0.5);
+    height: calc(261px * 0.5);
+  }
 }
 
 @keyframes logoTextShadow {
@@ -117,6 +122,10 @@
 
   @include below(lg) {
     font-size: 80px;
+  }
+
+  @include below(md) {
+    font-size: 56px;
   }
 }
 

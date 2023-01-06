@@ -90,6 +90,10 @@
   align-items: flex-start;
   justify-content: flex-end;
   min-width: 220px;
+
+  @include below(md) {
+    align-items: center;
+  }
 }
 
 .header-contacts__links {
@@ -148,6 +152,11 @@
   justify-content: center;
   border: none;
   cursor: pointer;
+
+  @include below(md) {
+    margin-left: 12px;
+    margin-right: 0;
+  }
 }
 
 .header-contacts__button svg {
@@ -169,10 +178,7 @@
   list-style: none;
   
   @include below(md) {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 100%;
+    display: none;
   }
 }
 
