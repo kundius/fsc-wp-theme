@@ -177,16 +177,24 @@
   border: none;
   cursor: pointer;
 
-  @include below(md) {
-    display: none;
-  }
-
   @include below(sm) {
     display: inline-flex;
     margin-right: 0;
     margin-left: 0;
     width: 48px;
     height: 48px;
+  }
+}
+
+.header-contacts__button-feedback {
+  @include below(md) {
+    display: none;
+  }
+}
+
+.header-contacts__button-callback {
+  @include above(md) {
+    display: none;
   }
 }
 

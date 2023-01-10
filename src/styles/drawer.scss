@@ -95,7 +95,7 @@
 
 .drawer-headline__logo {
   display: block;
-  height: 42px;
+  height: 44px;
 }
 
 .drawer-headline__logo img {
@@ -127,10 +127,8 @@
   flex-direction: column;
   align-items: center;
   background: #fffbe1;
-  padding-bottom: 18px;
-  padding-top: 18px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 12px;
+  gap: 12px;
 }
 
 .drawer-contacts__item {
@@ -140,7 +138,6 @@
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
-  margin-bottom: 12px;
 }
 
 .drawer-contacts__item-icon {
