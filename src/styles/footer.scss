@@ -263,7 +263,7 @@
 
   @include below(sm) {
     width: 100%;
-    order: 2;
+    order: 3;
   }
 }
 
@@ -290,7 +290,7 @@
   @include below(sm) {
     width: 100%;
     max-width: initial;
-    order: 3;
+    order: 4;
   }
 }
 
@@ -319,7 +319,7 @@
 
 .footer__creator {
   @include below(sm) {
-    order: 4;
+    order: 5;
   }
 }
 
