@@ -919,6 +919,10 @@
   padding-top: 60px;
   padding-bottom: 80px;
   background-color: #efefef;
+
+  @include below(sm) {
+    padding-bottom: 60px;
+  }
 }
 
 .home-partners__title {
@@ -1034,6 +1038,7 @@
 
   @include below(sm) {
     font-size: 32px;
+    margin-bottom: 40x;
   }
 }
 
