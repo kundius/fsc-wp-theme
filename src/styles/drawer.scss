@@ -54,7 +54,7 @@
   height: 60px;
   border: none;
   padding: 0;
-  background: #e5e7ee;
+  background-color: #516777;
   left: 100%;
   top: 0;
   z-index: 30;
@@ -65,7 +65,7 @@
   display: block;
   width: 28px;
   height: 3px;
-  background: #333;
+  background: #fff;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -77,7 +77,7 @@
   display: block;
   width: 28px;
   height: 3px;
-  background: #333;
+  background: #fff;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -88,13 +88,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 8px;
-}
-
-.drawer-headline__about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: -8px -8px 8px;
+  background-color: #516777;
+  padding: 8px;
 }
 
 .drawer-headline__logo {
@@ -106,16 +102,6 @@
   display: block;
   width: 100%;
   height: auto;
-}
-
-.drawer-headline__phone {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: -0.005em;
-  line-height: 1;
-  color: #000;
-  text-decoration: none;
-  margin-top: 2px;
 }
 
 .drawer-headline__feedback {
@@ -147,7 +133,7 @@
   padding-right: 8px;
 }
 
-.drawer-contacts__email {
+.drawer-contacts__item {
   display: flex;
   align-items: center;
   color: #333;
@@ -157,7 +143,7 @@
   margin-bottom: 12px;
 }
 
-.drawer-contacts__email-icon {
+.drawer-contacts__item-icon {
   margin-right: 5px;
   width: 24px;
   height: 24px;
@@ -169,14 +155,14 @@
   color: #404040;
 }
 
-.drawer-contacts__email-icon svg {
+.drawer-contacts__item-icon svg {
   display: block;
   fill: currentColor;
   width: 16px;
   height: 10px;
 }
 
-.drawer-contacts__email-text {
+.drawer-contacts__item-text {
   border-bottom: 1px dotted currentColor;
 }
 
