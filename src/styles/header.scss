@@ -67,6 +67,10 @@
   @include below(md) {
     margin-right: calc(190px - 48px);
   }
+
+  @include below(sm) {
+    margin-right: calc(56px - 48px);
+  }
 }
 
 .header__logo {
@@ -98,12 +102,20 @@
     min-width: 190px;
     align-items: center;
   }
+
+  @include below(sm) {
+    min-width: auto;
+  }
 }
 
 .header-contacts__links {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @include below(sm) {
+    display: none;
+  }
 }
 
 .header-contacts__phone {
@@ -167,6 +179,12 @@
 
   @include below(md) {
     display: none;
+  }
+
+  @include below(sm) {
+    display: inline-flex;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
