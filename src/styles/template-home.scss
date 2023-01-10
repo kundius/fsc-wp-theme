@@ -299,6 +299,11 @@
   @include below(md) {
     padding-bottom: 80px;
   }
+
+  @include below(sm) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
 
 .home-services__title {
@@ -443,8 +448,8 @@
   }
 
   @include below(sm) {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
@@ -453,8 +458,8 @@
   text-transform: uppercase;
 
   @include below(sm) {
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
