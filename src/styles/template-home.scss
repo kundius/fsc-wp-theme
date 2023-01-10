@@ -46,6 +46,10 @@
   @include below(md) {
     height: 680px;
   }
+
+  @include below(sm) {
+    height: 480px;
+  }
 }
 
 .intro-logo {
@@ -83,6 +87,11 @@
   @include below(md) {
     width: calc(804px * 0.6);
     height: calc(261px * 0.6);
+  }
+
+  @include below(sm) {
+    width: calc(804px * 0.35);
+    height: calc(261px * 0.35);
   }
 }
 
@@ -131,6 +140,10 @@
   @include below(md) {
     font-size: 60px;
   }
+
+  @include below(sm) {
+    font-size: 32px;
+  }
 }
 
 @keyframes logoTextDecoration {
@@ -154,6 +167,18 @@
   width: 0;
   height: 106px;
   animation: 0.8s ease-in-out 1.8s 1 normal forwards running logoTextDecoration;
+
+  @include below(lg) {
+    transform: scale(0.8);
+  }
+
+  @include below(md) {
+    transform: scale(0.6);
+  }
+
+  @include below(sm) {
+    transform: scale(0.35);
+  }
 }
 
 @keyframes linkScale {
@@ -170,11 +195,17 @@
 
 .intro-link {
   margin-top: 73px;
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   transform: scale(0.4);
   opacity: 0;
   animation: 0.8s ease-in-out 1.8s 1 normal forwards running linkScale;
+
+  @include below(sm) {
+    margin-top: 50px;
+  }
 }
 
 .intro-link__button {
@@ -277,6 +308,11 @@
   text-align: center;
   line-height: 1;
   margin-bottom: 66px;
+
+  @include below(sm) {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
 }
 
 .home-services__title::after {
@@ -407,8 +443,8 @@
   }
 
   @include below(sm) {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
@@ -417,8 +453,8 @@
   text-transform: uppercase;
 
   @include below(sm) {
-    font-size: 28px;
-    line-height: 28px;
+    font-size: 24px;
+    line-height: 24px;
   }
 }
 
@@ -466,6 +502,10 @@
     padding-top: 80px;
     padding-bottom: 120px;
   }
+  
+  @include below(sm) {
+    padding-bottom: 80px;
+  }
 }
 
 .home-advantages__title {
@@ -477,6 +517,9 @@
 
   @include below(lg) {
     margin-bottom: 120px;
+  }
+  @include below(sm) {
+    margin-bottom: 80px;
   }
 }
 
@@ -595,6 +638,10 @@
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 71px;
+
+  @include below(sm) {
+    margin-bottom: 50px;
+  }
 }
 
 .home-news__list {
@@ -932,6 +979,10 @@
   line-height: 1;
   text-align: center;
   margin-bottom: 60px;
+
+  @include below(sm) {
+    margin-bottom: 40px;
+  }
 }
 
 .home-partners__list {
@@ -1038,7 +1089,7 @@
 
   @include below(sm) {
     font-size: 32px;
-    margin-bottom: 40x;
+    margin-bottom: 40px;
   }
 }
 
