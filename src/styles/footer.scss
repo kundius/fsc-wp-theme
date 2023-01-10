@@ -260,14 +260,27 @@
 
 .footer__gap-1 {
   flex-grow: 1;
+
+  @include below(sm) {
+    width: 100%;
+    order: 2;
+  }
 }
 
 .footer__gap-2 {
   width: 32px;
+
+  @include below(sm) {
+    display: none;
+  }
 }
 
 .footer__gap-3 {
   flex-grow: 1;
+
+  @include below(sm) {
+    display: none;
+  }
 }
 
 .footer__copyright {
