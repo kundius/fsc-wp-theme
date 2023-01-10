@@ -306,6 +306,10 @@
   @include below(md) {
     width: calc(100% / 2);
   }
+
+  @include below(sm) {
+    width: 100%;
+  }
 }
 
 .home-services-card {
@@ -468,6 +472,10 @@
 
 .home-advantages__list {
   margin: 0 37px;
+
+  @include below(sm) {
+    margin: 0;
+  }
 }
 
 .home-advantages-list {
@@ -506,6 +514,10 @@
   @include below(md) {
     width: 50%;
     padding-top: 60px;
+  }
+
+  @include below(sm) {
+    width: 100%;
   }
 }
 
@@ -594,6 +606,10 @@
 
   @include below(md) {
     width: 50%;
+  }
+
+  @include below(sm) {
+    width: 100%;
   }
 }
 
