@@ -81,6 +81,10 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  @include below(sm) {
+    width: 144px;
+  }
 }
 
 .header__logo a {
