@@ -541,6 +541,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
 }
 
 .home-advantages-card__number {
@@ -931,6 +932,10 @@
 
 .home-partners__list {
   margin: 0 37px;
+
+  @include below(sm) {
+    margin: 0;
+  }
 }
 
 .home-partners-list {
@@ -1026,6 +1031,10 @@
   @include below(md) {
     margin-bottom: 60px;
   }
+
+  @include below(sm) {
+    font-size: 32px;
+  }
 }
 
 .home-order-form {
@@ -1044,31 +1053,61 @@
 .home-order-form__work-type {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
+
+  @include below(sm) {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
 }
 
 .home-order-form__address {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
+
+  @include below(sm) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
 }
 
 .home-order-form__assignment {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
+
+  @include below(sm) {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
 }
 
 .home-order-form__contact-person {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
+
+  @include below(sm) {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+  }
 }
 
 .home-order-form__area {
   grid-row: 3 / 4;
   grid-column: 1 / 2;
+
+  @include below(sm) {
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
+  }
 }
 
 .home-order-form__contact-phone {
   grid-row: 3 / 4;
   grid-column: 2 / 3;
+
+  @include below(sm) {
+    grid-row: 5 / 7;
+    grid-column: 1 / 2;
+  }
 }
 
 .home-order-form__file {
@@ -1076,6 +1115,11 @@
   grid-column: 1 / 2;
   display: flex;
   align-items: center;
+
+  @include below(sm) {
+    grid-row: 7 / 8;
+    grid-column: 1 / 2;
+  }
 }
 
 .home-order-form__rules {
@@ -1084,6 +1128,11 @@
   display: flex;
   align-items: center;
   padding-top: 15px;
+
+  @include below(sm) {
+    grid-row: 8 / 9;
+    grid-column: 1 / 2;
+  }
 }
 
 .home-order-form__captcha {
@@ -1092,6 +1141,11 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  @include below(sm) {
+    grid-row: 8 / 10;
+    grid-column: 1 / 2;
+  }
 }
 
 .home-order-form__submit {
@@ -1099,6 +1153,11 @@
   grid-column: 2 / 3;
   display: flex;
   align-items: center;
+
+  @include below(sm) {
+    grid-row: 10 / 11;
+    grid-column: 1 / 2;
+  }
 }
 
 .home-order-form__input {
