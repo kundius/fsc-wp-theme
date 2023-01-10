@@ -255,6 +255,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer__gap-1 {
@@ -276,15 +277,22 @@
   @include below(sm) {
     width: 100%;
     max-width: initial;
+    order: 3;
   }
 }
 
 .footer__counters {
+  @include below(sm) {
+    order: 1;
+  }
 }
 
 .footer__map {
   font-size: 14px;
   color: #b4c5db;
+  @include below(sm) {
+    order: 2;
+  }
 }
 
 .footer__map a {
@@ -297,6 +305,9 @@
 }
 
 .footer__creator {
+  @include below(sm) {
+    order: 4;
+  }
 }
 
 .footer__creator a {
