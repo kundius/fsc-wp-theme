@@ -200,12 +200,27 @@
 
 .header-contacts__button svg {
   fill: currentColor;
+}
+
+.header-contacts__button-feedback svg {
+  fill: currentColor;
   width: 24px;
   height: 17px;
 
   @include below(sm) {
     width: calc(24px * 0.8);
     height: calc(17px * 0.8);
+  }
+}
+
+.header-contacts__button-callback svg {
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+
+  @include below(sm) {
+    width: calc(24px * 0.8);
+    height: calc(24px * 0.8);
   }
 }
 
