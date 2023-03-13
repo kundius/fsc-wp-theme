@@ -111,7 +111,7 @@ Template Name: Контакты
                       </div>
 
                       <div class="contacts-form__submit">
-                        <button type="submit" class="ui-button-submit ui-button-submit_with-arrow">
+                        <button type="submit" class="ui-button-submit ui-button-submit_with-arrow ui-button-submit_upper">
                           <span class="ui-loader-square contacts-form__loader"></span>
                           Отправить
                         </button>

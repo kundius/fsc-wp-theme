@@ -1609,8 +1609,7 @@
 .contacts-form__rules {
   width: 320px;
   max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 9px auto;
   color: #424242;
 }
 
@@ -1641,7 +1640,7 @@
   background-color: #ebecec;
   border-radius: 0;
   text-align: center;
-  padding: 0 18px;
+  padding: 0 10px;
   height: 56px;
   font-size: 14px;
   color: #5c5c5c;
@@ -1662,7 +1661,7 @@
   background-color: #ebecec;
   text-align: center;
   border-radius: 0;
-  padding: 18px;
+  padding: 10px;
   font-size: 14px;
   color: #5c5c5c;
   font-family: inherit;
