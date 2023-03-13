@@ -9,7 +9,7 @@
 
     <div class="header-logo">
       <a href="/" class="header-logo__link">
-        <img src="<?php bloginfo('template_url') ?>/dist/images/logo.png" alt="<?php bloginfo('name') ?>" class="header-logo__image" />
+        <img src="<?php bloginfo('template_url') ?>/dist/images/logo-small.png" alt="<?php bloginfo('name') ?>" class="header-logo__image" />
         <span class="header-logo__text">ФинСтройКонсалт</span>
       </a>
     </div>
