@@ -1,7 +1,7 @@
 @import 'responsive';
 
 .header {
-  position: sticky;
+  position: relative;
   z-index: 200;
   top: 0;
   left: 0;
@@ -15,12 +15,22 @@
 
 .float-visible .header,
 .page-transparent-header .header {
-  margin-bottom: -74px;
+  position: absolute;
 }
 
 .float-visible .header {
   background-color: rgb(81, 103, 119);
   box-shadow: 1.414px 1.414px 7px 0px rgba(0, 0, 0, 0.35);
+  position: fixed;
+}
+
+.header-placeholder {
+  height: 74px;
+}
+
+.float-visible .header-placeholder,
+.page-transparent-header .header-placeholder {
+  display: none;
 }
 
 .header__container {

@@ -48,3 +48,5 @@
 
   </div>
 </section>
+
+<div class="header-placeholder"></div>
