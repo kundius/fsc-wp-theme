@@ -36,7 +36,7 @@ $service_pages = new WP_Query([
   <head>
     <?php get_template_part('partials/head');?>
   </head>
-  <body <?php body_class();?>>
+  <body <?php body_class('page-transparent-header');?>>
     <?php wp_body_open();?>
 
     <div class="ui-wrapper">

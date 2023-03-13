@@ -36,7 +36,7 @@
   background: 0 0;
   cursor: pointer;
   position: relative;
-  color: #fff;
+  color: #252525;
 
   &:hover {
     background: rgba(62, 162, 228, 0.22);
@@ -71,6 +71,11 @@
   @include below(sm) {
     margin-right: 0;
   }
+}
+
+.float-visible .header__toggle,
+.page-transparent-header .header__toggle {
+  color: #fff;
 }
 
 .header__logo {
@@ -127,7 +132,7 @@
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.1em;
-  color: #fff;
+  color: #252525;
   text-decoration: none;
   margin-top: 1px;
 
@@ -136,19 +141,29 @@
   }
 }
 
+.float-visible .header-contacts__phone,
+.page-transparent-header .header-contacts__phone {
+  color: #fff;
+}
+
 .header-contacts__phone:hover {
   text-decoration: none;
   color: #ff9333;
 }
 
 .header-contacts__email {
-  color: #dce9fa;
+  color: #252525;
   text-decoration: none;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.2em;
   border-bottom: 1px dashed currentColor;
   margin-top: 1px;
+}
+
+.float-visible .header-contacts__email,
+.page-transparent-header .header-contacts__email {
+  color: #dce9fa;
 }
 
 .header-contacts__email svg {
@@ -263,7 +278,7 @@
   padding-bottom: 10px;
   padding-left: 12px;
   padding-right: 12px;
-  color: #dce9fa;
+  color: #252525;
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
@@ -272,6 +287,11 @@
   @include below(lg) {
     font-size: 16px;
   }
+}
+
+.float-visible .header__menu > .menu-item > a,
+.page-transparent-header .header__menu > .menu-item > a {
+  color: #dce9fa;
 }
 
 .header__menu > .menu-item.current-menu-item > a,
