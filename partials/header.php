@@ -7,9 +7,10 @@
       <span></span>
     </button>
 
-    <div class="header__logo">
-      <a href="/">
-        <img src="<?php bloginfo('template_url') ?>/dist/images/logo.png" alt="<?php bloginfo('name') ?>" />
+    <div class="header-logo">
+      <a href="/" class="header-logo__link">
+        <img src="<?php bloginfo('template_url') ?>/dist/images/logo.png" alt="<?php bloginfo('name') ?>" class="header-logo__image" />
+        <span class="header-logo__text">ФинСтройКонсалт</span>
       </a>
     </div>
 

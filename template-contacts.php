@@ -14,9 +14,9 @@ Template Name: Контакты
     <div class="ui-wrapper">
       <?php get_template_part('partials/header') ?>
 
-      <div class="page">
+      <div class="page-main">
         <div class="ui-container">
-          <h1 class="page__title"><?php the_title() ?></h1>
+          <h1 class="page-main__title"><?php the_title() ?></h1>
 
           <div class="contacts-layout">
             <div class="contacts-layout__content">

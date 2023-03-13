@@ -1678,12 +1678,12 @@
   background-color: #8294ab;
 }
 
-.page {
+.page-main {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 
-.page__title {
+.page-main__title {
   text-align: center;
   margin: 0;
   color: #333333;
@@ -1695,7 +1695,7 @@
   margin-bottom: 40px;
 }
 
-.page__title::after {
+.page-main__title::after {
   content: '';
   height: 6px;
   width: 80px;
