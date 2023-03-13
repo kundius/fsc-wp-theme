@@ -1465,9 +1465,12 @@
   margin-top: 24px;
 }
 
-.contacts-content {
+.contacts-content-container__body {
   padding: 0 24px;
   margin-top: 19px;
+}
+
+.contacts-content {
 }
 
 .contacts-content__address {
@@ -1572,16 +1575,63 @@
   margin-top: 24px;
 }
 
-.contacts-form {}
+.contacts-form-container__body {
+  margin-top: 46px;
+}
+
+.contacts-form {
+}
 
 .contacts-form__process {}
 
-.contacts-form__title {}
+.contacts-form__title {
+  color: #424242;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.11px;
+  margin-bottom: 25px;
+}
 
-.contacts-form__fields {}
+.contacts-form__fields {
+  width: 320px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .contacts-form__field {}
 
-.contacts-form__rules {}
+.contacts-form__field + .contacts-form__field {
+  margin-top: 10px;
+}
 
-.contacts-form__submit {}
+.contacts-form__rules {
+  width: 320px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #424242;
+}
+
+.contacts-form__captcha {
+  display: flex;
+  justify-content: center;
+}
+
+.contacts-form__submit {
+  display: flex;
+  justify-content: center;
+}
+
+.contacts-form__success {
+  display: none;
+}
+
+.contacts-form__failed {
+  display: none;
+}
+
+.contacts-form__loader {
+  display: none;
+}
