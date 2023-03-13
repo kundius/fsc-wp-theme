@@ -1,7 +1,7 @@
 @import 'responsive';
 
 .header {
-  position: fixed;
+  position: sticky;
   z-index: 200;
   top: 0;
   left: 0;
@@ -11,6 +11,11 @@
 
   @include below(sm) {
   }
+}
+
+.float-visible .header,
+.page-transparent-header .header {
+  margin-bottom: -68px;
 }
 
 .float-visible .header {
@@ -23,8 +28,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .header__toggle {
@@ -108,9 +113,12 @@
 .header-logo__text {
   color: #000;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
   text-align: center;
+  line-height: 1;
+  letter-spacing: 0.1125em;
+  margin-top: 5px;
 }
 
 .float-visible .header-logo__text,
