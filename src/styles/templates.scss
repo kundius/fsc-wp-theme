@@ -1679,7 +1679,7 @@
 }
 
 .page-main {
-  padding-top: 80px;
+  padding-top: 73px;
   padding-bottom: 80px;
 }
 
@@ -1690,7 +1690,7 @@
   font-size: 36px;
   font-weight: 700;
   line-height: 1;
-  padding-bottom: 36px;
+  padding-bottom: 30px;
   position: relative;
   margin-bottom: 40px;
 }
@@ -1715,7 +1715,7 @@
 .contacts-layout__content {
   width: 50%;
   background-color: #ffffff;
-  padding-top: 48px;
+  padding-top: 47px;
   padding-left: 76px;
   padding-right: 76px;
   padding-bottom: 65px;
@@ -1724,7 +1724,7 @@
 .contacts-layout__form {
   width: 50%;
   background-color: #e4e5e6;
-  padding-top: 48px;
+  padding-top: 47px;
   padding-left: 76px;
   padding-right: 76px;
   padding-bottom: 65px;
@@ -1734,6 +1734,7 @@
 
 .contacts-content-container__headline {
   border-bottom: 1px solid #161f36;
+  padding-bottom: 13px;
 }
 
 .contacts-content-container__title {
@@ -1751,10 +1752,12 @@
   line-height: 1;
   text-align: center;
   letter-spacing: 0.4px;
+  margin-top: 24px;
 }
 
 .contacts-content {
   padding: 0 24px;
+  margin-top: 19px;
 }
 
 .contacts-content__address {
@@ -1768,7 +1771,7 @@
 .contacts-content__phone {
   line-height: 1.5;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 19px;
   color: #000;
   display: flex;
   align-items: center;
@@ -1792,8 +1795,8 @@
 }
 
 .contacts-content__phone svg {
-  fill: #939fae;
-  margin: 0 6px 0 -3px;
+  fill: #ec8a00;
+  margin: 0 10px 0 -3px;
 }
 
 .contacts-content__email {
@@ -1802,7 +1805,7 @@
   color: #ec8a00;
   display: flex;
   align-items: center;
-  letter-spacing: 0.09em;
+  letter-spacing: .15em;
 }
 
 .contacts-content__email a {
@@ -1820,22 +1823,25 @@
 }
 
 .contacts-content__email a:hover svg {
-  fill: #ff993f;
+  fill: #ec8a00;
 }
 
 .contacts-content__email svg {
   fill: #939fae;
-  margin: 0 11px 0 -1px;
+  margin: 0 12px 0 -1px;
 }
 
 .contacts-content__email {}
 
-.contacts-content__map {}
+.contacts-content__map {
+  margin-top: 47px;
+}
 
 .contacts-form-container {}
 
 .contacts-form-container__headline {
   border-bottom: 1px solid #fff;
+  padding-bottom: 13px;
 }
 
 .contacts-form-container__title {
@@ -1853,6 +1859,7 @@
   line-height: 1;
   text-align: center;
   letter-spacing: 0.4px;
+  margin-top: 24px;
 }
 
 .contacts-form {}
