@@ -1,7 +1,7 @@
 @import 'responsive';
 
 .header {
-  position: relative;
+  position: absolute;
   z-index: 200;
   top: 0;
   left: 0;
@@ -11,11 +11,6 @@
 
   @include below(sm) {
   }
-}
-
-.float-visible .header,
-.page-transparent-header .header {
-  position: absolute;
 }
 
 .float-visible .header {
