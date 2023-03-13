@@ -25,7 +25,6 @@ Template Name: Контакты
                   <div class="contacts-content-container__title">
                     Офис
                   </div>
-
                   <div class="contacts-content-container__description">
                     Приезжайте, будем рады видеть вас в офисе.
                   </div>
