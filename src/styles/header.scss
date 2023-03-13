@@ -90,6 +90,8 @@
 
 .header-logo {
   min-width: 220px;
+  display: flex;
+  justify-content: flex-start;
 
   @include below(md) {
     min-width: initial;

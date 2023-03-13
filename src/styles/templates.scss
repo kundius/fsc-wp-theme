@@ -1390,7 +1390,7 @@
 
 .page-main {
   padding-top: 73px;
-  padding-bottom: 80px;
+  padding-bottom: 116px;
 }
 
 .page-main__title {
@@ -1576,7 +1576,7 @@
 }
 
 .contacts-form-container__body {
-  margin-top: 46px;
+  margin-top: 45px;
 }
 
 .contacts-form {
@@ -1590,7 +1590,7 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.11px;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 .contacts-form__fields {
@@ -1635,3 +1635,43 @@
 .contacts-form__loader {
   display: none;
 }
+
+.contacts-form__input {
+  border: 2px solid #c6c6c6;
+  background-color: #ebecec;
+  border-radius: 0;
+  padding: 0 18px;
+  height: 56px;
+  font-size: 14px;
+  color: #5c5c5c;
+  font-family: inherit;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+
+  ._error & {
+    color: #e60f0f;
+    background-color: #ffe5e5;
+    border-color: #e24646;
+  }
+}
+
+.contacts-form__textarea {
+  border: 2px solid #c6c6c6;
+  background-color: #ebecec;
+  border-radius: 0;
+  padding: 18px;
+  font-size: 14px;
+  color: #5c5c5c;
+  font-family: inherit;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+
+  ._error & {
+    color: #e60f0f;
+    background-color: #ffe5e5;
+    border-color: #e24646;
+  }
+}
+
