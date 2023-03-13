@@ -113,6 +113,11 @@
   text-align: center;
 }
 
+.float-visible .header-logo__text,
+.page-transparent-header .header-logo__text {
+  color: #fff;
+}
+
 .header-contacts {
   display: flex;
   align-items: flex-start;
