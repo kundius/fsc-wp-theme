@@ -1916,6 +1916,7 @@
 .related__grid-cell {
   padding-left: 40px;
   padding-top: 40px;
+  width: calc(100% / 3);
 }
 
 .related-card {
@@ -1924,6 +1925,7 @@
 }
 
 .related-card::after {
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
