@@ -1282,18 +1282,19 @@
 
 .home-order-form__success {
   display: none;
-  grid-row: 1 / 6;
-  grid-column: 1 / 3;
-  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   z-index: 1;
-  // display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
 ._mail-sent .home-order-form__success {
-  display: block;
+  display: flex;
 }
 
 .home-order-form__success::before {
@@ -1315,18 +1316,19 @@
 
 .home-order-form__failed {
   display: none;
-  grid-row: 1 / 6;
-  grid-column: 1 / 3;
-  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   z-index: 1;
-  // display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
 ._mail-failed .home-order-form__failed {
-  display: block;
+  display: flex;
 }
 
 .home-order-form__failed::before {
