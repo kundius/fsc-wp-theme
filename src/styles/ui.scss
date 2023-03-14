@@ -777,19 +777,19 @@ body {
   font-size: 18px;
 }
 
-.wp-pagenavi .current {
+.wp-pagenavi span.current {
   border-color: #999999;
   font-weight: bold;
 }
 
-.wp-pagenavi .page:hover {
+.wp-pagenavi a.page:hover {
   border-color: #f67707;
 }
 
-.wp-pagenavi .previouspostslink {
+.wp-pagenavi a.previouspostslink {
   
 }
 
-.wp-pagenavi .nextpostslink {
+.wp-pagenavi a.nextpostslink {
   
 }
