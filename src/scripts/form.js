@@ -93,8 +93,7 @@ document.querySelectorAll(".js-form").forEach(function (form) {
             form.dispatchEvent(new Event("wpcf7invalid"));
 
             response.invalid_fields.forEach((field) => {
-              console.log(field)
-              renderMessage(field.field, field.message);
+              renderMessage(`.${field.field}`, field.message);
             });
           }
         });
