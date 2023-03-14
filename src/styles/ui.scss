@@ -761,14 +761,15 @@ body {
   display: none;
 }
 
-.wp-pagenavi .current,
-.wp-pagenavi .page,
-.wp-pagenavi .previouspostslink,
-.wp-pagenavi .nextpostslink {
+.wp-pagenavi span.current,
+.wp-pagenavi a.page,
+.wp-pagenavi a.previouspostslink,
+.wp-pagenavi a.nextpostslink {
   min-width: 48px;
   height: 48px;
   padding: 0 8px;
   display: flex;
+  color: #000;
   align-items: center;
   justify-content: center;
   border-radius: 24px;
