@@ -288,23 +288,24 @@ body {
 }
 
 .ui-button-more {
-  background-color: rgb(244, 143, 0);
+  background-color: transparent;
+  border: 2px solid #f67707;
   color: #fff;
   font-weight: bold;
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 56px;
-  border-radius: 28px;
+  min-height: 40px;
+  border-radius: 20px;
   text-decoration: none;
   border: none;
   cursor: pointer;
-  min-width: 220px;
+  min-width: 160px;
   max-width: 100%;
-  padding: 0 24px;
+  padding: 0 20px;
 
   .ui-loader-square {
     font-size: 80%;
@@ -320,8 +321,8 @@ body {
 }
 
 .ui-button-more:hover {
-  background-image: linear-gradient(#ff7e00 0%, #d76a00 100%);
-  box-shadow: 4.286px 2.575px 9px 0px rgba(0, 0, 0, 0.28);
+  background-color: #f67707;
+  color: #fff;
   text-decoration: none;
 }
 

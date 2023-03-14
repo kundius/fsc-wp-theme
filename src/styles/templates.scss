@@ -1871,6 +1871,10 @@
   padding-bottom: 30px;
   position: relative;
   margin-bottom: 40px;
+  width: 680px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .single-details__title::after {
@@ -1941,6 +1945,7 @@
 .related-card {
   position: relative;
   z-index: 1;
+  padding: 50px 44px 44px 44px;
 }
 
 .related-card::after {
@@ -1980,7 +1985,13 @@
   display: inline-block;
 }
 
-.related-card__title {}
+.related-card__title {
+  color: #4a4a4a;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
 
 .related-card__image {
   margin-top: 50px;

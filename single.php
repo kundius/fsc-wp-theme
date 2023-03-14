@@ -45,7 +45,7 @@
                   </div>
 
                   <div class="related-card__more">
-                    <a href="<?php the_permalink($item->ID) ?>" class="ui-button-more ui-button-more_with-arrow">Читать дальше</a>
+                    <a href="<?php the_permalink($item->ID) ?>" class="ui-button-more ui-button-more_with-arrow ui-button-more_upper">Читать дальше</a>
                   </div>
                 </article>
               </div>
