@@ -20,6 +20,7 @@ document.querySelectorAll(".js-form").forEach(function (form) {
 
   const renderMessage = (selector, message) => {
     const el = form.querySelector(selector);
+    console.log(selector, el)
     el.classList.add("_error");
     const messageEl = document.createElement("span");
     messageEl.classList.add("ui-form-error");
