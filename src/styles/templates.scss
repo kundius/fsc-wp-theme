@@ -1973,6 +1973,10 @@
   box-shadow: 0 0 27px 2px rgba(0, 0, 0, 0.16);
 }
 
+.related-card:hover .related-card__title {
+  color: #e88a04;
+}
+
 .related-card__date {
   color: #9a9a9a;
   font-size: 11px;
@@ -1999,10 +2003,12 @@
   font-weight: 700;
   line-height: 1;
   text-align: center;
+  margin: 9px 0 14px;
+  min-height: 3em;
 }
 
 .related-card__image {
-  margin-top: 50px;
+  margin: 0;
 }
 
 .related-card__image img {
@@ -2019,7 +2025,16 @@
 }
 
 .related-card__more {
-  margin-top: 22px;
+  margin-top: 24px;
   display: flex;
   justify-content: center;
+}
+
+.related-card__more a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
