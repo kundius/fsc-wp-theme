@@ -296,6 +296,7 @@ $service_pages = new WP_Query([
         <div class="ui-container">
           <div class="home-order__title">Отправьте заявку или позвоните</div>
 
+<?php echo do_shortcode('[contact-form-7 id="5" title="Контактная форма 1"]') ?>
           <form action="/wp-json/contact-form-7/v1/contact-forms/234/feedback" method="post" class="home-order-form js-form">
             <div class="home-order-form__work-type">
               <input type="text" name="work-type" class="home-order-form__input" placeholder="Вид работ" />
