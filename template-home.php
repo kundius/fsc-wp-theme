@@ -365,42 +365,42 @@ $service_pages = new WP_Query([
                   Отправить
                 </button>
               </div>
+            </div>
 
-              <div class="home-order-form__success">
-                <div class="home-order-result home-order-result_success">
-                  <div class="home-order-result__head">
-                    <div class="home-order-result__head-icon"></div>
-                    <div class="home-order-result__head-title">
-                      Ваше сообщение
-                      успешно отправлено
-                    </div>
+            <div class="home-order-form__success">
+              <div class="home-order-result home-order-result_success">
+                <div class="home-order-result__head">
+                  <div class="home-order-result__head-icon"></div>
+                  <div class="home-order-result__head-title">
+                    Ваше сообщение
+                    успешно отправлено
                   </div>
-                  <div class="home-order-result__body">
-                    <div class="home-order-result__body-text">
-                      В ближайшее время мы свяжемся с вами.
-                    </div>
-                    <div class="home-order-result__body-close wpcf7-form-status-reset">
-                      Закрыть окно
-                    </div>
+                </div>
+                <div class="home-order-result__body">
+                  <div class="home-order-result__body-text">
+                    В ближайшее время мы свяжемся с вами.
+                  </div>
+                  <div class="home-order-result__body-close wpcf7-form-status-reset">
+                    Закрыть окно
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div class="home-order-form__failed">
-                <div class="home-order-result home-order-result_failed">
-                  <div class="home-order-result__head">
-                    <div class="home-order-result__head-icon"></div>
-                    <div class="home-order-result__head-title">
-                      Возникла ошибка
-                    </div>
+            <div class="home-order-form__failed">
+              <div class="home-order-result home-order-result_failed">
+                <div class="home-order-result__head">
+                  <div class="home-order-result__head-icon"></div>
+                  <div class="home-order-result__head-title">
+                    Возникла ошибка
                   </div>
-                  <div class="home-order-result__body">
-                    <div class="home-order-result__body-text">
-                      Не удалось отправить сообщение
-                    </div>
-                    <div class="home-order-result__body-close wpcf7-form-status-reset">
-                      Закрыть окно
-                    </div>
+                </div>
+                <div class="home-order-result__body">
+                  <div class="home-order-result__body-text">
+                    Не удалось отправить сообщение
+                  </div>
+                  <div class="home-order-result__body-close wpcf7-form-status-reset">
+                    Закрыть окно
                   </div>
                 </div>
               </div>
