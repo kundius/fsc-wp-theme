@@ -1859,3 +1859,108 @@
 .page-news-layout__pagination {
   margin-top: 40px;
 }
+
+.single-details {}
+
+.single-details__title {
+  color: #4a4a4a;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  font-weight: normal;
+}
+
+.single-details__date {
+  color: #9a9a9a;
+  font-size: 11px;
+  letter-spacing: 0.28px;
+  text-align: center;
+}
+
+.single-details__date::before {
+  content: '';
+  background: url('../images/icon-calendar.svg') no-repeat 50% 50%;
+  width: 12px;
+  height: 13px;
+  background-size: contain;
+}
+
+.single-details__content {
+  width: 680px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.related {
+  margin-top: 90px;
+}
+
+.related__title {
+  color: #484848;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.related__grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -40px;
+  margin-top: -40px;
+}
+
+.related__grid-cell {
+  padding-left: 40px;
+  padding-top: 40px;
+}
+
+.related-card {
+  position: relative;
+  z-index: 1;
+}
+
+.related-card::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.11);
+  background-color: #ffffff;
+  z-index: -1;
+  transition: transform .5s ease;
+}
+
+.related-card:hover::after {
+  transform: scale(1.1);
+}
+
+.related-card__date {}
+
+.related-card__title {}
+
+.related-card__image {
+  margin-top: 50px;
+}
+
+.related-card__image img {
+  display: block;
+  border-radius: 4px;
+}
+
+.related-card__excerpt {
+  color: #000000;
+  font-size: 14px;
+  line-height: 18.19px;
+  margin-top: 18px;
+}
+
+.related-card__more {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+}

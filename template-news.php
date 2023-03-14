@@ -9,7 +9,7 @@ $nav = new WP_Query([
   'orderby' => 'menu_order',
 ]);
 $news = new WP_Query([
-  'posts_per_page' => 1,
+  'posts_per_page' => 9,
   'paged' => get_query_var('paged'),
   'post_type' => 'post',
   'order' => 'DESC',
