@@ -1289,6 +1289,10 @@
   align-items: center;
 }
 
+._mail-sent .home-order-form__success {
+  display: block;
+}
+
 .home-order-form__success::before {
   content: "";
   position: absolute;
@@ -1316,6 +1320,10 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+._mail-failed .home-order-form__failed {
+  display: block;
 }
 
 .home-order-form__failed::before {
