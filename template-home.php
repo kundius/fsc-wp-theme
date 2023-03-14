@@ -294,9 +294,9 @@ $service_pages = new WP_Query([
 
       <section class="home-order">
         <div class="ui-container">
+          <div class="home-order__title">Отправьте заявку или позвоните</div>
+            
           <form action="/wp-json/contact-form-7/v1/contact-forms/5/feedback" method="post" class="home-order-form js-form">
-            <div class="home-order-form__title">Отправьте заявку или позвоните</div>
-
             <div class="home-order-form__grid">
               <div class="home-order-form__work-type">
                 <input type="text" name="work-type" class="home-order-form__input" placeholder="Вид работ" />

@@ -73,7 +73,7 @@ Template Name: Контакты
                 </div>
 
                 <div class="contacts-form-container__body">
-                  <form action="/wp-json/contact-form-7/v1/contact-forms/234/feedback" method="post" class="contacts-form js-form">
+                  <form action="/wp-json/contact-form-7/v1/contact-forms/112/feedback" method="post" class="contacts-form js-form">
                     <div class="contacts-form__process">
                       <div class="contacts-form__title">
                         Обязательно укажите телефон для связи
