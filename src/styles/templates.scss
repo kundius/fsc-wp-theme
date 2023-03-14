@@ -1080,7 +1080,7 @@
   }
 }
 
-.home-order__title {
+.home-order-form__title {
   color: #ffffff;
   font-size: 48px;
   font-weight: 700;
@@ -1099,16 +1099,19 @@
 }
 
 .home-order-form {
-  display: grid;
   width: 930px;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  color: #fff;
+}
+
+.home-order-form__grid {
+  display: grid;
   grid-row-gap: 10px;
   grid-column-gap: 42px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 56px 56px 56px 65px 100px;
-  color: #fff;
 
   @include below(sm) {
     grid-template-columns: 1fr;
