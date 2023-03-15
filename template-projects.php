@@ -2,26 +2,31 @@
 /*
 Template Name: Проекты
  */
-function _get_children_ids( $post_parent ) {
-  $results = new WP_Query( array(
-      'post_type' => 'page',
-      'post_parent' => $post_parent,
-  ) );
 
-  $child_ids = array();
-  if ( $results->found_posts > 0 )
-      foreach ( $results->posts as $post ) // add each child id to array
-          $child_ids[] = $post->ID;
+function _get_children_ids($post_parent) {
+  $results = new WP_Query([
+    'post_type' => 'page',
+    'post_parent' => $post_parent,
+  ]);
 
-  if ( ! empty( $child_ids ) )
-      foreach ( $child_ids as $child_id ) // add further children to array
-          $child_ids = array_merge( $child_ids, _get_children_ids( $child_id ) );
+  $child_ids = [];
+  if ($results->found_posts > 0) {
+    foreach ($results->posts as $post) {
+      $child_ids[] = $post->ID;
+    }
+  }
+
+  if (!empty($child_ids)) {
+    foreach ($child_ids as $child_id) {
+      $child_ids = array_merge( $child_ids, _get_children_ids( $child_id ) );
+    }
+  }
 
   return $child_ids;
 }
-$ids = _get_children_ids(get_the_ID());
-print_r($ids);
+
 $post_parent_id = wp_get_post_parent_id() === 0 ? get_the_ID() : wp_get_post_parent_id();
+
 $nav = new WP_Query([
   'post_type' => 'page',
   'post_parent' => $post_parent_id,
@@ -30,6 +35,7 @@ $nav = new WP_Query([
   'meta_key' => '_wp_page_template',
   'meta_value' => 'template-projects.php'
 ]);
+
 $projects = new WP_Query([
   'posts_per_page' => 6,
   'paged' => get_query_var('paged'),
@@ -38,10 +44,7 @@ $projects = new WP_Query([
   'orderby' => 'date',
   'meta_key' => '_wp_page_template',
   'meta_value' => 'template-project.php',
-  'post__in' => $ids
-  // 'post_parent' => get_the_ID(),
-  // 'meta_key' => '_wp_page_template',
-  // 'meta_value' => 'template-project.php'
+  'post__in' => _get_children_ids(get_the_ID())
 ]);
 ?>
 <!DOCTYPE html>
