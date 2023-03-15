@@ -115,24 +115,24 @@ class Theme implements Service
         return $child_ids;
     }
 
-    public static function excerpt( $args = '' ){
+    public static function excerpt($args = '') {
         global $post;
     
-        if( is_string( $args ) ){
-            parse_str( $args, $args );
+        if (is_string($args)) {
+            parse_str($args, $args);
         }
     
-        $rg = (object) array_merge( [
+        $rg = (object) array_merge([
             'maxchar'           => 350,
             'text'              => '',
             'autop'             => true,
             'more_text'         => '...',
             'ignore_more'       => false,
             'save_tags'         => '<strong><b><a><em><i><var><code><span>',
-            'sanitize_callback' => static function( string $text, object $rg ){
-                return strip_tags( $text, $rg->save_tags );
+            'sanitize_callback' => static function(string $text, object $rg) {
+                return strip_tags($text, $rg->save_tags);
             },
-        ], $args );
+        ], $args);
     
         $rg = apply_filters( 'kama_excerpt_args', $rg );
     
