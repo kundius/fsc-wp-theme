@@ -94,7 +94,7 @@ class Theme implements Service
 
     public static function get_children_ids($post_parent)
     {
-        $results = new WP_Query([
+        $results = new \WP_Query([
           'post_type' => 'page',
           'post_parent' => $post_parent,
         ]);
