@@ -2,6 +2,15 @@
 /*
 Template Name: Проект
  */
+$post_parent_id = wp_get_post_parent_id(wp_get_post_parent_id());
+$nav = new WP_Query([
+  'post_type' => 'page',
+  'post_parent' => $post_parent_id,
+  'order' => 'ASC',
+  'orderby' => 'menu_order',
+  'meta_key' => '_wp_page_template',
+  'meta_value' => 'template-projects.php'
+]);
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes()?> itemscope itemtype="http://schema.org/WebSite">
@@ -23,7 +32,50 @@ Template Name: Проект
             <?php endif ?>
           </div>
 
-          project
+          <div class="project-layout">
+            <div class="project-layout__nav">
+              <div class="projects-nav">
+                <ul class="projects-nav__list">
+                  <li class="projects-nav__item<?php if ($post_parent_id === wp_get_post_parent_id()): ?> projects-nav__item_active<?php endif ?>">
+                    <a href="<?php the_permalink($post_parent_id) ?>" class="projects-nav__link">Все</a>
+                  </li>
+                  <?php while ($nav->have_posts()): ?>
+                  <?php $nav->the_post() ?>
+                  <li class="projects-nav__item<?php if (get_the_ID() === wp_get_post_parent_id()): ?> projects-nav__item_active<?php endif ?>">
+                    <a href="<?php the_permalink() ?>" class="projects-nav__link"><?php the_title() ?></a>
+                  </li>
+                  <?php endwhile ?>
+                  <?php wp_reset_postdata() ?>
+                </ul>
+              </div>
+            </div>
+
+            <div class="project-layout__details">
+              <div class="project-details">
+                <div class="project-details__image">
+                  <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title() ?>" />
+                </div>
+                <div class="project-details__content">
+                  <?php the_content() ?>
+                </div>
+              </div>
+            </div>
+
+            <?php if ($gallery = get_field('gallery')): ?>
+            <div class="project-layout__gallery">
+              <div class="project-gallery-list">
+                <?php foreach ($gallery as $item): ?>
+                <div class="project-gallery-list__item">
+                  <div class="project-gallery-card">
+                    <?php print_r($item) ?>
+                    <img src="" alt="">
+                  </div>
+                </div>
+                <?php endforeach ?>
+              </div>
+            </div>
+            <?php endif ?>
+          </div>
         </div>
       </div>
 
