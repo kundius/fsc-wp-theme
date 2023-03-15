@@ -2090,9 +2090,14 @@
 
 .projects-layout__nav {
   margin-bottom: 38px;
+  position: relative;
+  z-index: 2;
 }
 
-.projects-layout__list {}
+.projects-layout__list {
+  position: relative;
+  z-index: 1;
+}
 
 .projects-layout__pagination {
   margin-top: 117px;
@@ -2180,6 +2185,10 @@
   color: #f67707;
 }
 
+.projects-card:hover .projects-card__more-link svg {
+  fill: #f67707;
+}
+
 .projects-card__image {
   margin-bottom: 12px;
 }
@@ -2216,7 +2225,6 @@
 }
 
 .projects-card__more {
-  height: 0;
   display: flex;
   justify-content: flex-end;
 }
@@ -2225,6 +2233,11 @@
   display: flex;
   width: 25px;
   height: 15px;
+  margin-top: -15px;
+}
+
+.projects-card__more-link svg {
+  fill: #5a7ba6;
 }
 
 .projects-card__more-link::before {
