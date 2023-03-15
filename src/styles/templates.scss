@@ -2061,6 +2061,10 @@
   color: #ff9333;
 }
 
+.projects-nav__item_active .projects-nav__link:hover {
+  color: #333333;
+}
+
 .projects-nav__link {
   font-size: 18px;
   text-decoration: none;
