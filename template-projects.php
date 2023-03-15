@@ -61,27 +61,59 @@ $projects = new WP_Query([
             <?php if ($projects->have_posts()): ?>
             <div class="projects-layout__list">
               <div class="projects-list">
-                <?php while ($projects->have_posts()): ?>
-                <?php $projects->the_post()?>
-                <div class="projects-list__item">
-                  <article class="projects-card">
-                    <figure class="projects-card__image">
+                <?php $index = 0; while ($projects->have_posts()): ?>
+                <?php $projects->the_post() ?>
+
+                <?php if ($index === 0): ?>
+                <div class="projects-list__item projects-list__item_wide">
+                  <article class="projects-card-wide">
+                    <figure class="projects-card-wide__image">
                       <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title() ?>" />
                     </figure>
-                    <div class="projects-card__body">
-                      <div class="projects-card__date">
-                        <?php echo get_the_date('d.m.Y')?>
-                      </div>
-                      <div class="projects-card__title">
-                        <a href="<?php the_permalink() ?>">
-                          <?php echo \DomenART\Theme\Services\Theme::cut_string(get_the_title(), 120, ' «...»') ?>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="15" viewBox="0 0 25 15"><path d="M18 14.998v-6h-8v-3s5.38.021 8 0V0l6.068 7.95zm-13-9h3v3H5zm-5 0h3v3H0z"/></svg>
-                        </a>
-                      </div>
+
+                    <div class="projects-card-wide__date">
+                      <?php the_field('project_date', 'II кв. 2014 г.- II кв. 2015') ?>
+                    </div>
+
+                    <div class="projects-card-wide__title">
+                      <?php the_title() ?>
+                    </div>
+
+                    <div class="projects-card-wide__excerpt">
+                      <?php echo \DomenART\Theme\Services\Theme::cut_string(get_the_excerpt(), 120, ' «...»') ?>
+                    </div>
+
+                    <div class="projects-card-wide__more">
+                      <a href="<?php the_permalink($item->ID) ?>" class="ui-button-more ui-button-more_with-arrow ui-button-more_upper">Подробнее</a>
                     </div>
                   </article>
                 </div>
-                <?php endwhile ?>
+                <?php else: ?>
+                <div class="projects-list__item">
+                  <article class="projects-card">
+                    <figure class="projects-card__image">
+                      <img src="<?php the_post_thumbnail_url('medium')?>" alt="<?php the_title() ?>" />
+                    </figure>
+
+                    <div class="projects-card__date">
+                      <?php the_field('project_date', 'II кв. 2014 г.- II кв. 2015') ?>
+                    </div>
+
+                    <div class="projects-card__title">
+                      <?php the_title() ?>
+                    </div>
+
+                    <div class="projects-card__excerpt">
+                      <?php echo \DomenART\Theme\Services\Theme::cut_string(get_the_excerpt(), 240, ' «...»') ?>
+                    </div>
+
+                    <div class="projects-card__more">
+                      <a href="<?php the_permalink($item->ID) ?>"></a>
+                    </div>
+                  </article>
+                </div>
+                <?php endif ?>
+                <?php $index++; endwhile ?>
               </div>
             </div>
 
