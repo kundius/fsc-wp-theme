@@ -14,7 +14,6 @@ $nav = new WP_Query([
   'meta_value' => 'template-projects.php'
 ]);
 
-print_r(get_query_var('paged'));
 $projects = new WP_Query([
   'posts_per_page' => 6,
   'paged' => get_query_var('paged'),
@@ -65,7 +64,7 @@ $projects = new WP_Query([
                 <?php $index = 0; while ($projects->have_posts()): ?>
                 <?php $projects->the_post() ?>
 
-                <?php if ($index === 0): ?>
+                <?php if ($index === 0 && get_query_var('paged') == 0): ?>
                 <div class="projects-list__item projects-list__item_wide">
                   <article class="projects-card-wide">
                     <figure class="projects-card-wide__image">
