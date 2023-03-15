@@ -45,7 +45,7 @@ $projects = new WP_Query([
               <div class="projects-nav">
                 <ul class="projects-nav__list">
                   <li class="projects-nav__item<?php if (is_page($post_parent_id)): ?> projects-nav__item_active<?php endif ?>">
-                    <a href="<?php the_permalink($post_parent_id) ?>" class="projects-nav__link"><?php echo get_the_title($post_parent_id) ?></a>
+                    <a href="<?php the_permalink($post_parent_id) ?>" class="projects-nav__link">Все</a>
                   </li>
                   <?php while ($nav->have_posts()): ?>
                   <?php $nav->the_post() ?>
