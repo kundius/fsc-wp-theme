@@ -6,8 +6,6 @@ function _get_children_ids( $post_parent ) {
   $results = new WP_Query( array(
       'post_type' => 'page',
       'post_parent' => $post_parent,
-      'meta_key' => '_wp_page_template',
-      'meta_value' => 'template-project.php'
   ) );
 
   $child_ids = array();
@@ -38,6 +36,8 @@ $projects = new WP_Query([
   'post_type' => 'page',
   'order' => 'DESC',
   'orderby' => 'date',
+  'meta_key' => '_wp_page_template',
+  'meta_value' => 'template-project.php'
   'post__in' => $ids
   // 'post_parent' => get_the_ID(),
   // 'meta_key' => '_wp_page_template',
