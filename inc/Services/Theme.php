@@ -57,6 +57,7 @@ class Theme implements Service
         \add_theme_support('wp-block-styles');
         \add_theme_support('post-thumbnails');
         \add_theme_support('html5', ['comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'script', 'style']);
+        \add_post_type_support('page', ['excerpt']);
     }
 
     private function add_shortcodes(): void
