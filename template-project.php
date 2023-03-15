@@ -52,6 +52,8 @@ $nextID = $pages[$current+1];
                   <?php while ($nav->have_posts()): ?>
                   <?php $nav->the_post() ?>
                   <li class="projects-nav__item<?php if (get_the_ID() == wp_get_post_parent_id()): ?> projects-nav__item_active<?php endif ?>">
+                    <?php get_the_ID() ?> /
+                    <?php wp_get_post_parent_id() ?> /
                     <a href="<?php the_permalink() ?>" class="projects-nav__link"><?php the_title() ?></a>
                   </li>
                   <?php endwhile ?>
