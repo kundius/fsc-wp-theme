@@ -116,7 +116,7 @@ class PostTypes implements Service
             'rewrite'               => true,
             //'query_var'             => $taxonomy, // название параметра запроса
             'capabilities'          => [],
-            'meta_box_cb'           => null, // html метабокса. callback: `post_categories_meta_box` или `post_tags_meta_box`. false — метабокс отключен.
+            'meta_box_cb'           => 'post_categories_meta_box', // html метабокса. callback: `post_categories_meta_box` или `post_tags_meta_box`. false — метабокс отключен.
             'show_admin_column'     => false, // авто-создание колонки таксы в таблице ассоциированного типа записи. (с версии 3.5)
             'show_in_rest'          => null, // добавить в REST API
             'rest_base'             => null, // $taxonomy
