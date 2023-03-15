@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Проект
+ */
+?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes()?> itemscope itemtype="http://schema.org/WebSite">
   <head>
@@ -13,7 +18,7 @@
         <div class="ui-container">
           <h1 class="page-main__title"><?php the_title() ?></h1>
 
-          taxonomy-project_category
+          project
         </div>
       </div>
 
