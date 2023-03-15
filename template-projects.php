@@ -21,7 +21,8 @@ function _get_children_ids( $post_parent ) {
 
   return $child_ids;
 }
-
+$ids = _get_children_ids(get_the_ID());
+print_r($ids);
 $post_parent_id = wp_get_post_parent_id() === 0 ? get_the_ID() : wp_get_post_parent_id();
 $nav = new WP_Query([
   'post_type' => 'page',
@@ -37,7 +38,7 @@ $projects = new WP_Query([
   'post_type' => 'page',
   'order' => 'DESC',
   'orderby' => 'date',
-  'post__in' => _get_children_ids(get_the_ID())
+  'post__in' => $ids
   // 'post_parent' => get_the_ID(),
   // 'meta_key' => '_wp_page_template',
   // 'meta_value' => 'template-project.php'
