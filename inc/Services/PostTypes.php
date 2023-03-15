@@ -38,7 +38,7 @@ class PostTypes implements Service
 
     public function register_post_types(): void
     {
-        \register_post_type('project', [
+        \register_post_type('projects', [
             'label'  => null,
             'labels' => [
                 'name' => 'Проекты',
@@ -70,7 +70,7 @@ class PostTypes implements Service
             'query_var' => true,
         ]);
         
-        register_taxonomy('project_category', ['project'], [
+        register_taxonomy('projects-category', ['projects'], [
             'label' => '',
             'labels' => [
                 'name' => 'Категории',
