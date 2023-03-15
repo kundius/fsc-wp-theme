@@ -80,7 +80,6 @@ $projects = new WP_Query([
                     </div>
 
                     <div class="projects-card-wide__excerpt">
-                      <?php echo get_post()->post_excerpt ?>
                       <?php echo \DomenART\Theme\Services\Theme::cut_string(get_post()->post_excerpt, 160, '...') ?>
                     </div>
 
@@ -105,7 +104,6 @@ $projects = new WP_Query([
                     </div>
 
                     <div class="projects-card__excerpt">
-                      <?php echo get_post()->post_excerpt ?>
                       <?php echo \DomenART\Theme\Services\Theme::cut_string(get_post()->post_excerpt, 360, '...') ?>
                     </div>
 
