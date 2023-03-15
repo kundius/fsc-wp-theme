@@ -14,6 +14,7 @@ $nav = new WP_Query([
   'meta_value' => 'template-projects.php'
 ]);
 
+print_r(get_query_var('paged'));
 $projects = new WP_Query([
   'posts_per_page' => 6,
   'paged' => get_query_var('paged'),
