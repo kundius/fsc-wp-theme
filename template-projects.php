@@ -2,6 +2,26 @@
 /*
 Template Name: Проекты
  */
+function _get_children_ids( $post_parent ) {
+  $results = new WP_Query( array(
+      'post_type' => 'page',
+      'post_parent' => $post_parent,
+      'meta_key' => '_wp_page_template',
+      'meta_value' => 'template-project.php'
+  ) );
+
+  $child_ids = array();
+  if ( $results->found_posts > 0 )
+      foreach ( $results->posts as $post ) // add each child id to array
+          $child_ids[] = $post->ID;
+
+  if ( ! empty( $child_ids ) )
+      foreach ( $child_ids as $child_id ) // add further children to array
+          $child_ids = array_merge( $child_ids, _get_children_ids( $child_id ) );
+
+  return $child_ids;
+}
+
 $post_parent_id = wp_get_post_parent_id() === 0 ? get_the_ID() : wp_get_post_parent_id();
 $nav = new WP_Query([
   'post_type' => 'page',
@@ -17,9 +37,10 @@ $projects = new WP_Query([
   'post_type' => 'page',
   'order' => 'DESC',
   'orderby' => 'date',
-  'post_parent' => get_the_ID(),
-  'meta_key' => '_wp_page_template',
-  'meta_value' => 'template-project.php'
+  'post__in' => _get_children_ids(get_the_ID())
+  // 'post_parent' => get_the_ID(),
+  // 'meta_key' => '_wp_page_template',
+  // 'meta_value' => 'template-project.php'
 ]);
 ?>
 <!DOCTYPE html>
@@ -42,7 +63,7 @@ $projects = new WP_Query([
               <div class="projects-nav">
                 <ul class="projects-nav__list">
                   <li class="projects-nav__item<?php if (is_page($post_parent_id)): ?> projects-nav__item_active<?php endif ?>">
-                    <a href="<?php the_permalink($post_parent_id) ?>" class="projects-nav__link"><?php the_title($post_parent_id) ?></a>
+                    <a href="<?php the_permalink($post_parent_id) ?>" class="projects-nav__link"><?php echo get_the_title($post_parent_id) ?></a>
                   </li>
                   <?php while ($nav->have_posts()): ?>
                   <?php $nav->the_post() ?>
