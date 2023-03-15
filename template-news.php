@@ -30,7 +30,9 @@ $news = new WP_Query([
 
       <div class="page-main">
         <div class="ui-container">
-          <h1 class="page-main__title">О компании</h1>
+          <div class="page-headline">
+            <h1 class="page-headline__title">О компании</h1>
+          </div>
 
           <div class="page-news-layout">
             <div class="page-news-layout__nav">

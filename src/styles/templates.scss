@@ -1408,19 +1408,15 @@
   padding-bottom: 116px;
 }
 
-.page-main__title {
-  text-align: center;
-  margin: 0;
-  color: #333333;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1;
-  padding-bottom: 30px;
-  position: relative;
+.page-headline {
+  width: 680px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 40px;
 }
 
-.page-main__title::after {
+.page-headline::after {
   content: '';
   height: 6px;
   width: 80px;
@@ -1430,6 +1426,24 @@
   left: 50%;
   margin-left: -40px;
   bottom: 0;
+}
+
+.page-headline__title {
+  text-align: center;
+  margin: 0;
+  color: #333333;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.page-headline__description {
+  color: #454545;
+  font-size: 16px;
+  line-height: 1.5
+  text-align: center;
 }
 
 .contacts-layout {

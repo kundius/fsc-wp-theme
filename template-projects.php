@@ -38,7 +38,9 @@ $projects = new WP_Query([
 
       <div class="page-main">
         <div class="ui-container">
-          <h1 class="page-main__title"><?php the_title() ?></h1>
+          <div class="page-headline">
+            <h1 class="page-headline__title"><?php the_title() ?></h1>
+          </div>
 
           <div class="projects-layout">
             <div class="projects-layout__nav">
@@ -71,9 +73,9 @@ $projects = new WP_Query([
                       <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title() ?>" />
                     </figure>
 
-                    <div class="projects-card-wide__date">
-                      <?php the_field('project_date') ?>
-                    </div>
+                    <?php if ($description = get_field('description')): ?>
+                    <div class="projects-card-wide__date"><?php echo $description ?></div>
+                    <?php endif ?>
 
                     <div class="projects-card-wide__title">
                       <?php the_title() ?>
@@ -95,9 +97,9 @@ $projects = new WP_Query([
                       <img src="<?php the_post_thumbnail_url('medium')?>" alt="<?php the_title() ?>" />
                     </figure>
 
-                    <div class="projects-card__date">
-                      <?php the_field('project_date') ?>
-                    </div>
+                    <?php if ($description = get_field('description')): ?>
+                    <div class="projects-card__date"><?php echo $description ?></div>
+                    <?php endif ?>
 
                     <div class="projects-card__title">
                       <?php the_title() ?>

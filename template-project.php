@@ -16,7 +16,12 @@ Template Name: Проект
 
       <div class="page-main">
         <div class="ui-container">
-          <h1 class="page-main__title"><?php the_title() ?></h1>
+          <div class="page-headline">
+            <h1 class="page-headline__title"><?php the_title() ?></h1>
+            <?php if ($description = get_field('description')): ?>
+            <div class="page-headline__description"><?php echo $description ?></div>
+            <?php endif ?>
+          </div>
 
           project
         </div>

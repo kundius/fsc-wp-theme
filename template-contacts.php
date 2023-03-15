@@ -16,7 +16,9 @@ Template Name: Контакты
 
       <div class="page-main">
         <div class="ui-container">
-          <h1 class="page-main__title"><?php the_title() ?></h1>
+          <div class="page-headline">
+            <h1 class="page-headline__title"><?php the_title() ?></h1>
+          </div>
 
           <div class="contacts-layout">
             <div class="contacts-layout__content">
