@@ -66,8 +66,10 @@ $nextID = $pages[$current+1];
                 <div class="project-details__image">
                   <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title() ?>" />
                 </div>
-                <div class="project-details__content">
-                  <?php the_content() ?>
+                <div class="project-details__body">
+                  <div class="project-details__content">
+                    <?php the_content() ?>
+                  </div>
                 </div>
               </div>
             </div>
