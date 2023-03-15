@@ -48,7 +48,7 @@ class Theme implements Service
         \add_filter('wpcf7_load_js', '__return_false');
         \add_filter('wpcf7_load_css', '__return_false');
 
-        \add_image_size('theme-medium', 640, 480, true);
+        \add_image_size('theme-medium', 600, 400, true);
 
         // Add the theme support basic elements
         \add_theme_support('align-wide');
