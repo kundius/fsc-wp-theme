@@ -67,17 +67,24 @@ $nav = new WP_Query([
                 <?php foreach ($gallery as $item): ?>
                 <div class="project-gallery-list__item">
                   <div class="project-gallery-card">
-                    <?php print_r($item) ?>
-                    <img src="" alt="">
+                    <img src="<?php echo $item['sizes']['theme-medium'] ?>" alt="<?php echo $item['alt'] ?>" />
                   </div>
                 </div>
                 <?php endforeach ?>
               </div>
             </div>
             <?php endif ?>
+
+            <div class="project-layout__neighbors">
+              <div class="project-neighbors">
+                <?php posts_nav_link('', 'предыдущий', 'следующий') ?>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <?php get_template_part('partials/section-order') ?>
 
       <?php get_template_part('partials/footer')?>
     </div>
