@@ -3,28 +3,6 @@
 Template Name: Проекты
  */
 
-function _get_children_ids($post_parent) {
-  $results = new WP_Query([
-    'post_type' => 'page',
-    'post_parent' => $post_parent,
-  ]);
-
-  $child_ids = [];
-  if ($results->found_posts > 0) {
-    foreach ($results->posts as $post) {
-      $child_ids[] = $post->ID;
-    }
-  }
-
-  if (!empty($child_ids)) {
-    foreach ($child_ids as $child_id) {
-      $child_ids = array_merge( $child_ids, _get_children_ids( $child_id ) );
-    }
-  }
-
-  return $child_ids;
-}
-
 $post_parent_id = wp_get_post_parent_id() === 0 ? get_the_ID() : wp_get_post_parent_id();
 
 $nav = new WP_Query([
@@ -44,7 +22,7 @@ $projects = new WP_Query([
   'orderby' => 'date',
   'meta_key' => '_wp_page_template',
   'meta_value' => 'template-project.php',
-  'post__in' => _get_children_ids(get_the_ID())
+  'post__in' => \DomenART\Theme\Services\Theme::get_children_ids(get_the_ID())
 ]);
 ?>
 <!DOCTYPE html>

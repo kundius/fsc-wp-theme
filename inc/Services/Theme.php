@@ -91,4 +91,27 @@ class Theme implements Service
         $temp = substr($str, 0, $length);
         return substr($temp, 0, strrpos($temp, ' ') ) . $postfix;
     }
+
+    public static function get_children_ids($post_parent)
+    {
+        $results = new WP_Query([
+          'post_type' => 'page',
+          'post_parent' => $post_parent,
+        ]);
+      
+        $child_ids = [];
+        if ($results->found_posts > 0) {
+          foreach ($results->posts as $post) {
+            $child_ids[] = $post->ID;
+          }
+        }
+      
+        if (!empty($child_ids)) {
+          foreach ($child_ids as $child_id) {
+            $child_ids = array_merge($child_ids, self::get_children_ids($child_id));
+          }
+        }
+      
+        return $child_ids;
+    }
 }
