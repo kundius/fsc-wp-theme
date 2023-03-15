@@ -2,10 +2,11 @@
 /*
 Template Name: Проект
  */
-$post_parent_id = wp_get_post_parent_id(wp_get_post_parent_id());
+$post_parent_id = wp_get_post_parent_id();
+$nav_parent_id = wp_get_post_parent_id(wp_get_post_parent_id());
 $nav = new WP_Query([
   'post_type' => 'page',
-  'post_parent' => $post_parent_id,
+  'post_parent' => $nav_parent_id,
   'order' => 'ASC',
   'orderby' => 'menu_order',
   'meta_key' => '_wp_page_template',
@@ -46,14 +47,12 @@ $nextID = $pages[$current+1];
             <div class="project-layout__nav">
               <div class="projects-nav">
                 <ul class="projects-nav__list">
-                  <li class="projects-nav__item<?php if ($post_parent_id == wp_get_post_parent_id()): ?> projects-nav__item_active<?php endif ?>">
-                    <a href="<?php the_permalink($post_parent_id) ?>" class="projects-nav__link">Все</a>
+                  <li class="projects-nav__item<?php if ($post_parent_id === $nav_parent_id): ?> projects-nav__item_active<?php endif ?>">
+                    <a href="<?php the_permalink($nav_parent_id) ?>" class="projects-nav__link">Все</a>
                   </li>
                   <?php while ($nav->have_posts()): ?>
                   <?php $nav->the_post() ?>
-                  <li class="projects-nav__item<?php if (get_the_ID() == wp_get_post_parent_id()): ?> projects-nav__item_active<?php endif ?>">
-                    <?php get_the_ID() ?> /
-                    <?php wp_get_post_parent_id() ?> /
+                  <li class="projects-nav__item<?php if ($post_parent_id === get_the_ID()): ?> projects-nav__item_active<?php endif ?>">
                     <a href="<?php the_permalink() ?>" class="projects-nav__link"><?php the_title() ?></a>
                   </li>
                   <?php endwhile ?>
