@@ -126,7 +126,7 @@ class Theme implements Service
             'maxchar'           => 350,
             'text'              => '',
             'autop'             => true,
-            'more_text'         => 'Читать дальше...',
+            'more_text'         => '...',
             'ignore_more'       => false,
             'save_tags'         => '<strong><b><a><em><i><var><code><span>',
             'sanitize_callback' => static function( string $text, object $rg ){
