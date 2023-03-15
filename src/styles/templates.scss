@@ -2097,3 +2097,141 @@
 .projects-layout__pagination {
   margin-top: 117px;
 }
+
+.projects-list {
+  display: flex;
+  margin-left: -40px;
+  margin-top: -80px;
+  flex-wrap: wrap;
+}
+
+.projects-list__item {
+  padding-left: 40px;
+  padding-top: 80px;
+  width: 25%;
+}
+
+.projects-list__item_wide {
+  width: 50%;
+}
+
+.projects-card-wide {
+  position: relative;
+}
+
+.projects-card-wide:hover .projects-card-wide__title {
+  color: #f67707;
+}
+
+.projects-card-wide__image {
+  margin-bottom: 27px;
+}
+
+.projects-card-wide__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.projects-card-wide__date {
+  color: #454545;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.projects-card-wide__title {
+  color: #0a6eaa;
+  font-size: 36px;
+  line-height: 1.25;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.projects-card-wide__excerpt {
+  color: #676767;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.projects-card-wide__more {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-card-wide__more a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.projects-card {
+  position: relative;
+}
+
+.projects-card:hover .projects-card__title {
+  color: #f67707;
+}
+
+.projects-card__image {
+  margin-bottom: 12px;
+}
+
+.projects-card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.projects-card__date {
+  color: #454545;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.projects-card__title {
+  color: #0a6eaa;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.projects-card__excerpt {
+  color: #676767;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.projects-card__more {
+  height: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.projects-card__more-link {
+  display: flex;
+  width: 25px;
+  height: 15px;
+}
+
+.projects-card__more-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}

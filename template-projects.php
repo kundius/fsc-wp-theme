@@ -108,7 +108,10 @@ $projects = new WP_Query([
                     </div>
 
                     <div class="projects-card__more">
-                      <a href="<?php the_permalink($item->ID) ?>"></a>
+                      <a href="<?php the_permalink($item->ID) ?>" class="projects-card__more-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="15" viewBox="0 0 25 15"><path d="M18 14.998v-6h-8v-3s5.38.021 8 0V0l6.068 7.95zm-13-9h3v3H5zm-5 0h3v3H0z"/>
+                      </svg>
+                    </a>
                     </div>
                   </article>
                 </div>
