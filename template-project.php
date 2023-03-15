@@ -12,7 +12,7 @@ $nav = new WP_Query([
   'meta_value' => 'template-projects.php'
 ]);
 
-$pagelist = get_pages('sort_column=menu_order&sort_order=asc');
+$pagelist = get_pages('sort_column=menu_order&sort_order=asc&meta_key=_wp_page_template&meta_value=template-projects.php');
 $pages = [];
 foreach ($pagelist as $page) {
    $pages[] += $page->ID;
@@ -46,12 +46,12 @@ $nextID = $pages[$current+1];
             <div class="project-layout__nav">
               <div class="projects-nav">
                 <ul class="projects-nav__list">
-                  <li class="projects-nav__item<?php if ($post_parent_id === wp_get_post_parent_id()): ?> projects-nav__item_active<?php endif ?>">
+                  <li class="projects-nav__item<?php if ($post_parent_id == wp_get_post_parent_id()): ?> projects-nav__item_active<?php endif ?>">
                     <a href="<?php the_permalink($post_parent_id) ?>" class="projects-nav__link">Все</a>
                   </li>
                   <?php while ($nav->have_posts()): ?>
                   <?php $nav->the_post() ?>
-                  <li class="projects-nav__item<?php if (get_the_ID() === wp_get_post_parent_id()): ?> projects-nav__item_active<?php endif ?>">
+                  <li class="projects-nav__item<?php if (get_the_ID() == wp_get_post_parent_id()): ?> projects-nav__item_active<?php endif ?>">
                     <a href="<?php the_permalink() ?>" class="projects-nav__link"><?php the_title() ?></a>
                   </li>
                   <?php endwhile ?>
