@@ -2162,6 +2162,14 @@
   margin-top: 35px;
 }
 
+.projects-card-wide__excerpt p {
+  margin: 0;
+}
+
+.projects-card-wide__excerpt p + p {
+  margin-top: 16px;
+}
+
 .projects-card-wide__more {
   margin-top: 26px;
   display: flex;
@@ -2219,6 +2227,14 @@
   font-size: 14px;
   line-height: 1.5;
   margin-top: 35px;
+}
+
+.projects-card__excerpt p {
+  margin: 0;
+}
+
+.projects-card__excerpt p + p {
+  margin-top: 16px;
 }
 
 .projects-card__more {
