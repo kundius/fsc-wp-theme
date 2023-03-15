@@ -82,19 +82,19 @@ $projects = new WP_Query([
 
             <?php if ($projects->have_posts()): ?>
             <div class="projects-layout__list">
-              <div class="home-news-list">
+              <div class="projects-list">
                 <?php while ($projects->have_posts()): ?>
                 <?php $projects->the_post()?>
-                <div class="home-news-list__item">
-                  <article class="home-news-card">
-                    <figure class="home-news-card__image">
+                <div class="projects-list__item">
+                  <article class="projects-card">
+                    <figure class="projects-card__image">
                       <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title() ?>" />
                     </figure>
-                    <div class="home-news-card__body">
-                      <div class="home-news-card__date">
+                    <div class="projects-card__body">
+                      <div class="projects-card__date">
                         <?php echo get_the_date('d.m.Y')?>
                       </div>
-                      <div class="home-news-card__title">
+                      <div class="projects-card__title">
                         <a href="<?php the_permalink() ?>">
                           <?php echo \DomenART\Theme\Services\Theme::cut_string(get_the_title(), 120, ' «...»') ?>
                           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="15" viewBox="0 0 25 15"><path d="M18 14.998v-6h-8v-3s5.38.021 8 0V0l6.068 7.95zm-13-9h3v3H5zm-5 0h3v3H0z"/></svg>
