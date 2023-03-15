@@ -72,7 +72,7 @@ $projects = new WP_Query([
                     </figure>
 
                     <div class="projects-card-wide__date">
-                      <?php the_field('project_date') ?>II кв. 2014 г.- II кв. 2015
+                      <?php the_field('project_date') ?>
                     </div>
 
                     <div class="projects-card-wide__title">
@@ -96,7 +96,7 @@ $projects = new WP_Query([
                     </figure>
 
                     <div class="projects-card__date">
-                      <?php the_field('project_date') ?>II кв. 2014 г.- II кв. 2015
+                      <?php the_field('project_date') ?>
                     </div>
 
                     <div class="projects-card__title">
