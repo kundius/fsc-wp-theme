@@ -12,6 +12,7 @@ use DomenART\Theme\Services\Acf;
 use DomenART\Theme\Services\Ajax;
 use DomenART\Theme\Services\Svg;
 use DomenART\Theme\Services\Theme;
+use DomenART\Theme\Services\PostTypes;
 use DomenART\Theme\Tools\Body_Class;
 use DomenART\Theme\Tools\Template_Parts;
 
@@ -42,6 +43,7 @@ class Framework
         Editor_Patterns::class,
         Svg::class,
         Menu::class,
+        PostTypes::class,
 
         // Services as Tools
         Body_Class::class,
