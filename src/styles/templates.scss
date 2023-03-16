@@ -2521,3 +2521,75 @@
   height: 5px;
   width: 5px;
 }
+
+.certificates-layout {}
+
+.certificates-layout__nav {}
+
+.certificates-layout__list {}
+
+.certificates-layout__pagination {}
+
+.certificates-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -40px;
+  margin-top: -40px;
+}
+
+.certificates-list__item {
+  padding-top: 40px;
+  padding-left: 40px;
+  width: 50%;
+}
+
+.certificates-card {
+  position: relative;
+  z-index: 1;
+  transition: .5s ease;
+  transition-property: box-shadow, transform;
+  padding: 50px 87px;
+}
+
+.certificates-card:hover::before {
+  box-shadow: 0 0 27px rgba(0, 0, 0, 0.26);
+  transform: scale(1.05);
+}
+
+.certificates-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  z-index: -1;
+}
+
+.certificates-card__figure {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.certificates-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.certificates-card__loupe {
+  width: 162px;
+  height: 162px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
