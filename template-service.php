@@ -21,6 +21,7 @@ Template Name: Услуга
           </div>
 
           <div class="service-layout">
+            <?php if ($description = get_field('description')): ?>
             <div class="service-layout__details">
               <div class="service-details">
                 <?php if ($icon = get_field('icon')): ?>
@@ -28,13 +29,12 @@ Template Name: Услуга
                   <?php echo $icon ?>
                 </figure>
                 <?php endif; ?>
-                <?php if ($description = get_field('description')): ?>
                 <div class="service-details__description">
                   <?php echo $description ?>
                 </div>
-                <?php endif; ?>
               </div>
             </div>
+            <?php endif; ?>
 
             <div class="service-layout__content">
               <div class="service-content">

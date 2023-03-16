@@ -2624,10 +2624,13 @@
 .service-layout {}
 
 .service-layout__details {
-  margin-bottom: 50px;
+  margin-bottom: 44px;
 }
 
-.service-layout__content {}
+.service-layout__content {
+  margin: 0 auto;
+  width: 750px;
+}
 
 .service-details {
   display: flex;
@@ -2637,8 +2640,6 @@
 }
 
 .service-details__thumbnail {
-  margin-left: 29px;
-  margin-right: 54px;
   flex-shrink: 0;
   width: 150px;
   height: 150px;
@@ -2647,7 +2648,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: 0 54px 0 29px;
 }
 
 .service-details__thumbnail svg {
@@ -2663,12 +2664,13 @@
   line-height: 1.5;
   flex-grow: 1;
   max-width: 880px;
+  letter-spacing: 0.05em;
 }
 
 .service-content {
   color: #000000;
   font-size: 18px;
-  line-height: 1.65;
+  line-height: 1.333;
   padding-bottom: 22px;
   border-bottom: 1px solid #dadada;
 }
@@ -2710,6 +2712,10 @@
 .service-content ul li {
   position: relative;
   padding-left: 35px;
+}
+
+.service-content ul li + li {
+  margin-top: 24px;
 }
 
 .service-content ul li::before {
