@@ -2664,7 +2664,7 @@
   line-height: 1.5;
   flex-grow: 1;
   max-width: 880px;
-  letter-spacing: 0.05em;
+  // letter-spacing: 0.05em;
 }
 
 .service-content {
@@ -2734,7 +2734,9 @@
   background: url('../images/bg-services.jpg') no-repeat 50% 100%;
   min-height: calc(100vh - 74px);
   background-size: 100% auto;
-  padding: 150px 0;
+  padding: 141px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .not-found {
@@ -2750,6 +2752,7 @@
   font-weight: 700;
   line-height: 1;
   margin-right: 33px;
+  margin-top: -6px;
 }
 
 .not-found__body {}
@@ -2758,13 +2761,15 @@
   font-size: 32px;
   font-weight: 700;
   line-height: 1;
+  margin-bottom: 12px;
 }
 
 .not-found__desc {
   color: #222222;
   font-size: 16px;
+  line-height: 1.5;
 }
 
 .not-found__back {
-  margin-top: 52px;
+  margin-top: 48px;
 }
