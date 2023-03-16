@@ -2648,12 +2648,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 .service-details__thumbnail svg {
   fill: #fff;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
 }
 
 .service-details__description {
