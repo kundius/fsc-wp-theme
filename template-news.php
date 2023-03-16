@@ -31,7 +31,7 @@ $news = new WP_Query([
       <div class="page-main">
         <div class="ui-container">
           <div class="page-headline">
-            <h1 class="page-headline__title">О компании</h1>
+            <h1 class="page-headline__title"><?php echo get_the_title(wp_get_post_parent_id()) ?></h1>
           </div>
 
           <div class="page-news-layout">
