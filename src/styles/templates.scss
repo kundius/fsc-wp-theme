@@ -2453,4 +2453,34 @@
 
 }
 
-.project-neighbors__next {}
+.project-neighbors__next span {
+  width: 11px;
+  height: 7px;
+  background: currentColor;
+  display: inline-block;
+  margin-left: 16px;  
+  position: relative;
+}
+
+.project-neighbors__next span::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: currentColor;
+  height: 1px;
+  width: 100%;
+}
+
+.project-neighbors__next span::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  height: 4px;
+  width: 4px;
+}

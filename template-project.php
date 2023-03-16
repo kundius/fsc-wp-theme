@@ -13,7 +13,6 @@ $nav = new WP_Query([
   'meta_value' => 'template-projects.php'
 ]);
 
-
 $projects_query = new WP_Query;
 $projects = $projects_query->query([
   'post_type' => 'page',
@@ -22,14 +21,10 @@ $projects = $projects_query->query([
   'meta_key' => '_wp_page_template',
   'meta_value' => 'template-project.php'
 ]);
-// $pagelist = get_pages('sort_column=menu_order&sort_order=asc&meta_key=_wp_page_template&meta_value=template-project.php');
-
 $pages = [];
 foreach ($projects as $page) {
-  print_r($page->ID);
   $pages[] += $page->ID;
 }
-
 $current = array_search(get_the_ID(), $pages);
 $prevID = $pages[$current-1];
 $nextID = $pages[$current+1];
@@ -102,11 +97,17 @@ $nextID = $pages[$current+1];
             <div class="project-layout__neighbors">
               <div class="project-neighbors">
                 <?php if (!empty($prevID)): ?>
-                <a href="<?php echo get_permalink($prevID) ?>" title="<?php echo get_the_title($prevID) ?>" class="project-neighbors__prev">предыдущий</a>
+                <a href="<?php echo get_permalink($prevID) ?>" title="<?php echo get_the_title($prevID) ?>" class="project-neighbors__prev">
+                  <span></span>
+                  предыдущий
+                </a>
                 <?php endif ?>
                 <div></div>
                 <?php if (!empty($nextID)): ?>
-                <a href="<?php echo get_permalink($nextID) ?>" title="<?php echo get_the_title($nextID) ?>" class="project-neighbors__next">следующий</a>
+                <a href="<?php echo get_permalink($nextID) ?>" title="<?php echo get_the_title($nextID) ?>" class="project-neighbors__next">
+                  следующий
+                  <span></span>
+                </a>
                 <?php endif ?>
               </div>
             </div>
