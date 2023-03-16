@@ -2559,26 +2559,35 @@
   position: relative;
   z-index: 1;
   padding: 50px 87px;
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: .5s ease;
+  transition-property: box-shadow, transform;
 }
 
-.certificates-card:hover::before {
+.certificates-card:hover {
   box-shadow: 0 0 27px rgba(0, 0, 0, 0.26);
   transform: scale(1.05);
 }
 
-.certificates-card::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  z-index: -1;
-  transition: .5s ease;
-  transition-property: box-shadow, transform;
-}
+// .certificates-card:hover::before {
+//   box-shadow: 0 0 27px rgba(0, 0, 0, 0.26);
+//   transform: scale(1.05);
+// }
+
+// .certificates-card::before {
+//   content: '';
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
+//   background-color: #ffffff;
+//   z-index: -1;
+//   transition: .5s ease;
+//   transition-property: box-shadow, transform;
+// }
 
 .certificates-card__link {
   display: block;
@@ -2602,9 +2611,9 @@
   // transition-property: transform;
 }
 
-.certificates-card:hover .certificates-card__figure {
-  // transform: scale(1.05);
-}
+// .certificates-card:hover .certificates-card__figure {
+//   // transform: scale(1.05);
+// }
 
 .certificates-card__image {
   display: block;
