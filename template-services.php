@@ -41,6 +41,9 @@ $service_pages = new WP_Query([
                     <h2 class="services-card__title">
                       <a href="<?php the_permalink() ?>" class="services-card__link"><?php the_title() ?></a>
                     </h2>
+                    <div class="services-card__content">
+                      <?php the_content() ?>
+                    </div>
                   </article>
                 </div>
                 <?php endwhile?>
