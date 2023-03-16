@@ -86,7 +86,9 @@ $nextID = $pages[$current+1];
                 <?php foreach ($gallery as $item): ?>
                 <div class="project-gallery-list__item">
                   <div class="project-gallery-card">
-                    <img src="<?php echo $item['sizes']['medium'] ?>" alt="<?php echo $item['alt'] ?>" />
+                    <a href="<?php echo $item['url'] ?>" data-fslightbox="lightbox">
+                      <img src="<?php echo $item['sizes']['medium'] ?>" alt="<?php echo $item['alt'] ?>" />
+                    </a>
                   </div>
                 </div>
                 <?php endforeach ?>
