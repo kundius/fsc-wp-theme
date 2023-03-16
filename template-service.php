@@ -14,7 +14,7 @@ Template Name: Услуга
     <div class="ui-wrapper">
       <?php get_template_part('partials/header') ?>
 
-      <div class="service-main">
+      <div class="page-main page-main_service">
         <div class="ui-container">
           <div class="page-headline">
             <h1 class="page-headline__title"><?php the_title() ?></h1>

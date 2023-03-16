@@ -1408,8 +1408,14 @@
   padding-bottom: 116px;
 }
 
-.project-main {
-  padding-top: 66px;
+.page-main_service {
+  background: url('../images/bg-services.jpg') no-repeat 50% 100%;
+  background-size: 100% auto;
+}
+
+.page-main_project {
+  // padding-top: 66px;
+  padding-bottom: 0;
 }
 
 .page-content {
@@ -2614,13 +2620,6 @@
 }
 
 .page-about-layout__content {}
-
-.service-main {
-  padding-top: 73px;
-  padding-bottom: 120px;
-  background: url('../images/bg-services.jpg') no-repeat 50% 100%;
-  background-size: 100% auto;
-}
 
 .service-layout {}
 

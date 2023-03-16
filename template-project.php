@@ -40,7 +40,7 @@ $nextID = $pages[$current+1];
     <div class="ui-wrapper">
       <?php get_template_part('partials/header') ?>
 
-      <div class="project-main">
+      <div class="project-main page-main_project">
         <div class="ui-container">
           <div class="page-headline">
             <h1 class="page-headline__title"><?php the_title() ?></h1>
