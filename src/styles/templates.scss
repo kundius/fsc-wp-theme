@@ -2730,10 +2730,11 @@
   top: 8px;
 }
 
-.page-404 {
+.page-not-found {
   background: url('../images/bg-services.jpg') no-repeat 50% 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 74px);
   background-size: 100% auto;
+  padding: 150px 0;
 }
 
 .not-found {
