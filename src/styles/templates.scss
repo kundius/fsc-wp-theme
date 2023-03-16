@@ -2813,6 +2813,8 @@
   z-index: 1;
   flex-grow: 1;
   padding: 49px 28px 32px;
+  transition: .5s ease .2s;
+  transition-property: z-index;
 }
 
 .services-card::before {
