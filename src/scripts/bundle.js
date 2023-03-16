@@ -1,3 +1,5 @@
+import fsLightbox from "fslightbox";
+
 // import lazySizes from "lazysizes";
 // import "lazysizes/plugins/native-loading/ls.native-loading";
 // import "lazysizes/plugins/object-fit/ls.object-fit";
@@ -7,7 +9,6 @@ import "./home";
 import "./modal";
 import "./form";
 import "./drawer";
-import "./menuScrollTo";
 import "./inputFile";
 import "./common";
 import "./tabs";

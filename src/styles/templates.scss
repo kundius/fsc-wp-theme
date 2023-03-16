@@ -2400,7 +2400,14 @@
   width: 50%;
 }
 
-.project-gallery-card {}
+.project-gallery-card {
+  transition: .5s ease;
+  transition-property: box-shadow;
+}
+
+.project-gallery-card:hover {
+  box-shadow: 0 0 27px rgba(0, 0, 0, 0.26);
+}
 
 .project-gallery-card img {
   display: block;
@@ -2573,6 +2580,19 @@
   transition-property: box-shadow, transform;
 }
 
+.certificates-card__link {
+  display: block;
+}
+
+.certificates-card__link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .certificates-card__figure {
   display: block;
   margin: 0;
@@ -2595,6 +2615,8 @@
 .certificates-card__loupe {
   width: 162px;
   height: 162px;
+  opacity: 0;
+  transition: opacity .5s ease;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   position: absolute;
@@ -2604,4 +2626,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.certificates-card:hover .certificates-card__loupe {
+  opacity: 1;
 }
