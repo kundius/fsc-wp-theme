@@ -4,7 +4,7 @@ Template Name: Услуги
  */
 $service_pages = new WP_Query([
   'post_type' => 'page',
-  'post_parent' => 11,
+  'post_parent' => get_the_ID(),
   'order' => 'ASC',
   'orderby' => 'menu_order',
 ]);

@@ -1419,17 +1419,17 @@
 }
 
 .page-content {
-  width: 680px;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  // width: 680px;
+  // max-width: 100%;
+  // margin-left: auto;
+  // margin-right: auto;
 }
 
 .page-headline {
-  width: 680px;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  // width: 960px;
+  // max-width: 100%;
+  // margin-left: auto;
+  // margin-right: auto;
   margin-bottom: 40px;
   position: relative;
   padding-bottom: 18px;
@@ -2882,6 +2882,7 @@
 }
 
 .services-content h2 {
+  margin: 0;
   font-size: 32px;
   line-height: 50px;
   color: #1a192e;
@@ -2943,4 +2944,9 @@
 
 .services-content__text p + p {
   margin-top: 28px;
+}
+
+.services-content__text .wp-block-separator {
+  border-bottom-width: 6px;
+  border-bottom-color: #ec8a00;
 }
