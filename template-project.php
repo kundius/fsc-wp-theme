@@ -13,11 +13,21 @@ $nav = new WP_Query([
   'meta_value' => 'template-projects.php'
 ]);
 
-$pagelist = get_pages('sort_column=menu_order&sort_order=asc&meta_key=_wp_page_template&meta_value=template-project.php');
+
+$projects_query = new WP_Query;
+$projects = $projects_query->query([
+  'post_type' => 'page',
+  'order' => 'ASC',
+  'orderby' => 'menu_order',
+  'meta_key' => '_wp_page_template',
+  'meta_value' => 'template-project.php'
+]);
+// $pagelist = get_pages('sort_column=menu_order&sort_order=asc&meta_key=_wp_page_template&meta_value=template-project.php');
+print_r($projects);
 $pages = [];
-foreach ($pagelist as $page) {
-   $pages[] += $page->ID;
-}
+// foreach ($pagelist as $page) {
+//    $pages[] += $page->ID;
+// }
 
 $current = array_search(get_the_ID(), $pages);
 $prevID = $pages[$current-1];
