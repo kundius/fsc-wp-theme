@@ -25,9 +25,9 @@ $projects = $projects_query->query([
 // $pagelist = get_pages('sort_column=menu_order&sort_order=asc&meta_key=_wp_page_template&meta_value=template-project.php');
 
 $pages = [];
-foreach ($pagelist as $page) {
+foreach ($projects as $page) {
   print_r($page->ID);
-//    $pages[] += $page->ID;
+  $pages[] += $page->ID;
 }
 
 $current = array_search(get_the_ID(), $pages);
