@@ -45,21 +45,9 @@ $service_pages = new WP_Query([
             <?php wp_reset_postdata()?>
           </div>
 
-          <?php if ($services['content_title'] || $services['content_text']): ?>
           <div class="services-content">
-            <?php if ($services['content_title']): ?>
-            <div class="services-content__title">
-              <?php echo $services['content_title'] ?>
-            </div>
-            <?php endif; ?>
-            <?php if ($services['content_text']): ?>
-            <div class="services-content__text">
-              <?php echo $services['content_text'] ?>
-            </div>
-            <?php endif; ?>
+            <?php the_content() ?>
           </div>
-          <?php endif; ?>
-
         </div>
       </div>
 
