@@ -70,7 +70,7 @@ $nextID = $pages[$current+1];
             <div class="project-layout__details">
               <div class="project-details">
                 <div class="project-details__image">
-                  <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title() ?>" />
+                  <img src="<?php the_post_thumbnail_url('medium')?>" alt="<?php the_title() ?>" />
                 </div>
                 <div class="project-details__body">
                   <div class="project-details__content">
@@ -86,7 +86,7 @@ $nextID = $pages[$current+1];
                 <?php foreach ($gallery as $item): ?>
                 <div class="project-gallery-list__item">
                   <div class="project-gallery-card">
-                    <img src="<?php echo $item['sizes']['theme-medium'] ?>" alt="<?php echo $item['alt'] ?>" />
+                    <img src="<?php echo $item['sizes']['medium'] ?>" alt="<?php echo $item['alt'] ?>" />
                   </div>
                 </div>
                 <?php endforeach ?>
