@@ -23,11 +23,12 @@ $projects = $projects_query->query([
   'meta_value' => 'template-project.php'
 ]);
 // $pagelist = get_pages('sort_column=menu_order&sort_order=asc&meta_key=_wp_page_template&meta_value=template-project.php');
-print_r($projects);
+
 $pages = [];
-// foreach ($pagelist as $page) {
+foreach ($pagelist as $page) {
+  print_r($page->ID);
 //    $pages[] += $page->ID;
-// }
+}
 
 $current = array_search(get_the_ID(), $pages);
 $prevID = $pages[$current-1];
