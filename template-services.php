@@ -26,27 +26,33 @@ $service_pages = new WP_Query([
             <h1 class="page-headline__title"><?php the_title() ?></h1>
           </div>
 
-          <div class="services-list">
-            <?php while ($service_pages->have_posts()): ?>
-            <?php $service_pages->the_post()?>
-            <div class="services-list__item">
-              <article class="services-card">
-                <?php if ($icon = get_field('icon', get_the_ID())): ?>
-                <figure class="services-card__image">
-                  <?php echo $icon ?>
-                </figure>
-                <?php endif; ?>
-                <h2 class="services-card__title">
-                  <a href="<?php the_permalink() ?>" class="services-card__link"><?php the_title() ?></a>
-                </h2>
-              </article>
+          <div class="services-layout">
+            <div class="services-layout__list">
+              <div class="services-list">
+                <?php while ($service_pages->have_posts()): ?>
+                <?php $service_pages->the_post()?>
+                <div class="services-list__item">
+                  <article class="services-card">
+                    <?php if ($icon = get_field('icon', get_the_ID())): ?>
+                    <figure class="services-card__image">
+                      <?php echo $icon ?>
+                    </figure>
+                    <?php endif; ?>
+                    <h2 class="services-card__title">
+                      <a href="<?php the_permalink() ?>" class="services-card__link"><?php the_title() ?></a>
+                    </h2>
+                  </article>
+                </div>
+                <?php endwhile?>
+                <?php wp_reset_postdata()?>
+              </div>
             </div>
-            <?php endwhile?>
-            <?php wp_reset_postdata()?>
-          </div>
 
-          <div class="services-content">
-            <?php the_content() ?>
+            <div class="services-layout__content">
+              <div class="services-content">
+                <?php the_content() ?>
+              </div>
+            </div>
           </div>
         </div>
       </div>
