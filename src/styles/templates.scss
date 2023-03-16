@@ -2650,6 +2650,12 @@
   justify-content: center;
 }
 
+.service-details__thumbnail svg {
+  fill: #fff;
+  width: 120px;
+  height: 120px;
+}
+
 .service-details__description {
   color: #3a3a3a;
   font-size: 20px;
