@@ -2524,11 +2524,16 @@
 
 .certificates-layout {}
 
-.certificates-layout__nav {}
+.certificates-layout__nav {
+  margin-bottom: 37px;
+  position: relative;
+  z-index: 1;
+}
 
-.certificates-layout__list {}
-
-.certificates-layout__pagination {}
+.certificates-layout__list {
+  position: relative;
+  z-index: 2;
+}
 
 .certificates-list {
   display: flex;
@@ -2546,8 +2551,6 @@
 .certificates-card {
   position: relative;
   z-index: 1;
-  transition: .5s ease;
-  transition-property: box-shadow, transform;
   padding: 50px 87px;
 }
 
@@ -2566,6 +2569,8 @@
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   z-index: -1;
+  transition: .5s ease;
+  transition-property: box-shadow, transform;
 }
 
 .certificates-card__figure {
@@ -2573,6 +2578,12 @@
   margin: 0;
   padding: 0;
   position: relative;
+  transition: .5s ease;
+  transition-property: transform;
+}
+
+.certificates-card:hover .certificates-card__figure {
+  transform: scale(1.05);
 }
 
 .certificates-card__image {
@@ -2585,6 +2596,7 @@
   width: 162px;
   height: 162px;
   background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
   position: absolute;
   left: 50%;
   top: 50%;
