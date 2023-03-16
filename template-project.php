@@ -13,7 +13,7 @@ $nav = new WP_Query([
   'meta_value' => 'template-projects.php'
 ]);
 
-$pagelist = get_pages('sort_column=menu_order&sort_order=asc&meta_key=_wp_page_template&meta_value=template-projects.php');
+$pagelist = get_pages('sort_column=menu_order&sort_order=asc&meta_key=_wp_page_template&meta_value=template-project.php');
 $pages = [];
 foreach ($pagelist as $page) {
    $pages[] += $page->ID;
@@ -34,7 +34,7 @@ $nextID = $pages[$current+1];
     <div class="ui-wrapper">
       <?php get_template_part('partials/header') ?>
 
-      <div class="page-main">
+      <div class="project-main">
         <div class="ui-container">
           <div class="page-headline">
             <h1 class="page-headline__title"><?php the_title() ?></h1>
