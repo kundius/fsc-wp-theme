@@ -23,9 +23,9 @@ Template Name: Услуга
           <div class="service-layout">
             <div class="service-layout__details">
               <div class="service-details">
-                <?php if ($image = get_field('list_thumbnail')): ?>
+                <?php if ($icon = get_field('icon')): ?>
                 <figure class="service-details__thumbnail">
-                  <img src="<?php echo $image['url'] ?>" alt="<?php the_title()?>" />
+                  <?php echo $icon ?>
                 </figure>
                 <?php endif; ?>
                 <?php if ($description = get_field('description')): ?>

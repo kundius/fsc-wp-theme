@@ -79,9 +79,9 @@ $service_pages = new WP_Query([
             <?php $service_pages->the_post()?>
             <div class="home-services__item">
               <article class="home-services-card">
-                <?php if ($image = get_field('list_thumbnail', get_the_ID())): ?>
+                <?php if ($icon = get_field('icon', get_the_ID())): ?>
                 <figure class="home-services-card__image">
-                  <img src="<?php echo $image['url'] ?>" alt="<?php the_title()?>" />
+                  <?php echo $icon ?>
                 </figure>
                 <?php endif; ?>
                 <h2 class="home-services-card__title">
