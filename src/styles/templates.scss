@@ -3226,6 +3226,7 @@
 }
 
 .about-benefits-item {
+  position: relative;
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
   background-color: #ffffff;
@@ -3248,7 +3249,7 @@
   position: absolute;
   top: -48px;
   left: 50%;
-  margin-left: 52px;
+  margin-left: -52px;
   display: flex;
   align-items: center;
   justify-content: center;
