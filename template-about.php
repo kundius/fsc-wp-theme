@@ -27,26 +27,64 @@ $nav = new WP_Query([
           </div>
 
           <div class="page-about-layout">
-            <div class="page-about-layout__nav">
-              <div class="about-nav">
-                <ul class="about-nav__list">
-                  <?php while ($nav->have_posts()): ?>
-                  <?php $nav->the_post() ?>
-                  <li class="about-nav__item<?php if (is_page(get_the_ID())): ?> about-nav__item_active<?php endif ?>">
-                    <a href="<?php the_permalink() ?>" class="about-nav__link"><?php the_title() ?></a>
-                  </li>
-                  <?php endwhile ?>
-                  <?php wp_reset_postdata() ?>
-                </ul>
+            <?php if ($subtitle = get_field('subtitle')): ?>
+            <div class="page-about-layout__subtitle">
+              <div class="about-subtitle">
+                <?php echo $subtitle ?>
               </div>
             </div>
+            <?php endif ?>
 
-            <div class="page-about-layout__content ui-content">
-              <?php the_content() ?>
+            <?php if ($object = get_field('object')): ?>
+            <div class="page-about-layout__object">
+              <div class="about-object">
+                <div class="about-object__image">
+                  <img src="<?php echo $object['image']['url'] ?>" alt="<?php echo $object['image']['alt'] ?>">
+                </div>
+                <div class="about-object__desc">
+                  <?php echo $object['description'] ?>
+                </div>
+              </div>
             </div>
+            <?php endif ?>
+
+            <?php if ($proposal = get_field('proposal')): ?>
+            <div class="page-about-layout__proposal">
+              <div class="about-proposal">
+                <div class="about-proposal__desc">
+                  <?php echo $proposal['description'] ?>
+                </div>
+                  <div class="about-proposal__title">
+                    <?php echo $proposal['title'] ?>
+                  </div>
+              </div>
+            </div>
+            <?php endif ?>
+
+            <?php if ($benefits = get_field('benefits')): ?>
+            <div class="page-about-layout__benefits">
+              <div class="about-benefits">
+                <?php foreach ($benefits as $key => $item): ?>
+                  <div class="about-benefits-item">
+                    <div class="about-benefits-item__num">
+                      <?php echo $key + 1 ?>
+                    </div>
+                    <div class="about-benefits-item__icon">
+                      <?php echo $item['icon'] ?>
+                    </div>
+                    <div class="about-benefits-item__title">
+                      <?php echo $item['text'] ?>
+                    </div>
+                  </div>
+                <?php endforeach ?>
+              </div>
+            </div>
+            <?php endif ?>
           </div>
         </div>
       </div>
+
+			<?php get_template_part('partials/section-partners') ?>
 
       <?php get_template_part('partials/footer')?>
     </div>
