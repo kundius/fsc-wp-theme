@@ -3150,7 +3150,7 @@
 }
 
 .about-object__image {
-  flex: 1 1 0;
+  flex: 1 1 50%;
 }
 
 .about-object__image img {
@@ -3164,7 +3164,7 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 28px;
-  flex: 1 1 0;
+  flex: 1 1 50%;
 }
 
 .about-object__desc p {
@@ -3190,7 +3190,7 @@
   text-align: center;
   padding: 60px;
   position: relative;
-  flex: 1 1 0;
+  flex: 1 1 50%;
 }
 
 .about-proposal__title::after {
@@ -3209,7 +3209,7 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 28px;
-  flex: 1 1 0;
+  flex: 1 1 50%;
 }
 
 .about-proposal__desc p {
