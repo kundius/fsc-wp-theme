@@ -3116,7 +3116,10 @@
 
 .page-about-layout {}
 
-.page-about-layout__subtitle {}
+.page-about-layout__subtitle {
+  margin-left: 205px;
+  margin-top: 50px;
+}
 
 .page-about-layout__object {
   margin-top: 80px;
@@ -3134,11 +3137,10 @@
   color: #1a192e;
   font-size: 32px;
   font-weight: 700;
-  line-height: 40px;
-  margin-left: 204px
+  line-height: 41px;
 }
 
-.about-subtitle:first-child {
+.about-subtitle:first-line {
   font-size: 36px;
   text-transform: uppercase;
 }
@@ -3172,7 +3174,7 @@
 }
 
 .about-object__desc * + p {
-  margin-top: 25px;
+  margin-top: 28px;
 }
 
 .about-proposal {
@@ -3188,7 +3190,7 @@
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
-  padding: 60px;
+  padding: 51px;
   position: relative;
   flex: 1 1 50%;
 }
@@ -3233,7 +3235,7 @@
   padding-top: 65px;
   padding-left: 12px;
   padding-right: 12px;
-  padding-bottom: 36px;
+  padding-bottom: 32px;
   flex: 1 1 0;
 }
 
@@ -3247,7 +3249,7 @@
   text-align: center;
   border-radius: 50%;
   position: absolute;
-  top: -48px;
+  top: -58px;
   left: 50%;
   margin-left: -52px;
   display: flex;
@@ -3263,7 +3265,6 @@
   height: 100px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
 }
 
 .about-benefits-item__icon svg {
