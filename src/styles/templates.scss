@@ -3146,14 +3146,11 @@
 .about-object {
   display: flex;
   align-items: center;
-  margin-left: -45px;
-  margin-top: -45px;
+  gap: 45px;
 }
 
 .about-object__image {
-  width: 50%;
-  padding-left: 45px;
-  padding-top: 45px;
+  flex: 1 1 0;
 }
 
 .about-object__image img {
@@ -3167,6 +3164,7 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 28px;
+  flex: 1 1 0;
 }
 
 .about-object__desc p {
@@ -3184,7 +3182,6 @@
 }
 
 .about-proposal__title {
-  width: 50%;
   background-color: #465f6f;
   color: #ffffff;
   font-size: 24px;
@@ -3193,11 +3190,12 @@
   text-align: center;
   padding: 60px;
   position: relative;
+  flex: 1 1 0;
 }
 
 .about-proposal__title::after {
   content: '';
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIwIiBoZWlnaHQ9IjU2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDIyMCA1NiI+PGc+PGc+PHBhdGggZD0iTS0wLjAwMDA0LC0wLjAwMDAzdjBoMjE5Ljk5OTk2djB2NTUuOTk5ODh2MGgtMjE5Ljk5OTk2djB6IiBmaWxsPSIjZjJlYWUxIiBmaWxsLW9wYWNpdHk9IjEiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg0K");
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAAA4CAMAAAChUWYnAAAAAXNSR0IB2cksfwAAALdQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////EIqpSQAAAD10Uk5TAAEQKighN0YyEQ0nIDMVAgokKy9FOxkEByxEPh4GBRwiQSMIAxgpCxQmOi4OQzE2NBtIH0clGkkdPEstMCmvkbEAAAGMSURBVHic3dbJcoJQFIThRkSCXEQQRYYgaKKJccw8vf9zJVJWnbPJxl36bk716q9vd4HTszp21+m5V57Vzr5vm8DtDcJ2DaPYjJLxJG3X1GROnBfldbuqWVb7TTNftOvmNouiIl+u2hXexff1OnnYXJTYXpg4Xc/2f1M7j822VzaLzeYy24KQ2OYZYpt1UDaQ2XBUNpDZ4IttAzIbHsXWBY3tnMjFtgSZDU9iMyCz9UOxBSCz+RCbCzKbrWx7kNmMsg1AZguULWSzucy2nkVsGxyJbeGB2IZS2UBmQy22IchsSMQWgcyGZ7HFILPhRaVAZhumKgUy2xwqBTJbrFJrkNmMsk3wV/if2kbKlrLZEmbbmNn2OiC2pQdiG2plA5kNpdgWILOhEZsBmQ1vYstAZoMtNgdktulUbBnIbO3f8mzLQWbLlK0Amc1RtneQ2WJlq9hsW2ZbwWwrO8S26x2xDb6ygcyGo9gqkNnwIbYZyGz4FNsXyGz4FlsNMlu1ElsXZLYZxNaAzJYpW/MDMg+OwHfqjQYAAAAASUVORK5CYII=");
   width: 220px;
   height: 56px;
   right: -128px;
@@ -3207,11 +3205,11 @@
 }
 
 .about-proposal__desc {
-  width: 50%;
   color: #000000;
   font-size: 16px;
   font-weight: 500;
   line-height: 28px;
+  flex: 1 1 0;
 }
 
 .about-proposal__desc p {
