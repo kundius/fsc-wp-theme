@@ -74,7 +74,7 @@
   height: 261px;
   margin-left: auto;
   margin-right: auto;
-  animation: 1.2s ease-in-out 0.6s 1 normal forwards running logoImageScale;
+  animation: 2.4s ease-in-out 1.2s 1 normal forwards running logoImageScale;
   transform-origin: 50% 50%;
   transform: scale(0);
   opacity: 0;
@@ -130,8 +130,8 @@
   text-shadow: -1px 1px 0 #2f2214;
   transform: scale(0);
   opacity: 0;
-  animation: 0.8s ease-in-out 1s 1 normal forwards running logoTextShadow,
-    0.8s ease-in-out 0.2s 1 normal forwards running logoTextScale;
+  animation: 1.6s ease-in-out 2s 1 normal forwards running logoTextShadow,
+    1.6s ease-in-out 0.4s 1 normal forwards running logoTextScale;
 
   @include below(lg) {
     font-size: 80px;
@@ -166,7 +166,7 @@
   background: url("../images/intro-logo-decoration.png");
   width: 0;
   height: 106px;
-  animation: 0.8s ease-in-out 1.8s 1 normal forwards running logoTextDecoration;
+  animation: 1.6s ease-in-out 3.6s 1 normal forwards running logoTextDecoration;
 
   @include below(lg) {
     transform: scale(0.8);
@@ -201,7 +201,7 @@
   justify-content: center;
   transform: scale(0.4);
   opacity: 0;
-  animation: 0.8s ease-in-out 1.8s 1 normal forwards running linkScale;
+  animation: 1.6s ease-in-out 3.6s 1 normal forwards running linkScale;
 
   @include below(sm) {
     margin-top: 50px;
