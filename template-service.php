@@ -36,14 +36,6 @@ Template Name: Услуга
             </div>
             <?php endif; ?>
 
-            <?php if ($listing = get_field('listing')): ?>
-            <div class="service-layout__content">
-              <div class="service-content">
-                <?php echo $listing ?>
-              </div>
-            </div>
-            <?php endif; ?>
-
             <div class="service-layout__content">
               <div class="service-content">
                 <?php the_content() ?>
