@@ -42,7 +42,7 @@ $service_pages = new WP_Query([
                       <a href="<?php the_permalink() ?>" class="services-card__link"><?php the_title() ?></a>
                     </h2>
                     <div class="services-card__content">
-                      <?php the_content() ?>
+                      <?php the_field('listing', get_the_ID()) ?>
                     </div>
                   </article>
                 </div>
