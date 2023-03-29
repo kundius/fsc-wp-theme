@@ -1,7 +1,8 @@
 <?php
 /*
 Template Name: Проект
- */
+Template Post Type: post
+*/
 $post_parent_id = wp_get_post_parent_id();
 $nav_parent_id = wp_get_post_parent_id(wp_get_post_parent_id());
 $nav = new WP_Query([

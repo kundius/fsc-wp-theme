@@ -45,7 +45,7 @@ $service_pages = new WP_Query([
             </div>
             <ul class="underground-contacts__links">
               <li>
-                <a href="<?php the_permalink(49)?>" target="_blank">Пользовательское соглашение</a>
+                <a href="<?php the_permalink(289)?>" target="_blank">Пользовательское соглашение</a>
               </li>
               <li>
                 <a href="<?php the_permalink(3)?>" target="_blank">Политика обработки персональных данных</a>
