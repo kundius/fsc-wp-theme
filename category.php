@@ -38,6 +38,7 @@
           $query = new WP_Query($query_params);
           $parent_id = $category->parent === 0 ? $category->term_id : $category->parent;
           $nav = get_term_children($parent_id, 'category');
+          print_r($query->posts);
           ?>
           <div class="projects-layout">
             <div class="projects-layout__nav">
