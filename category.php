@@ -14,11 +14,16 @@
           <div class="page-headline">
             <h1 class="page-headline__title"><?php echo single_cat_title( '', false ) ?></h1>
           </div>
-123
+
           <?php $template = get_field('template', 'category_' . get_queried_object_id()) ?>
 
-          <?php echo $template ?>
-          <?php echo get_queried_object_id() ?>
+          <?php if ($template === 'objects'): ?>
+            123
+          <?php endif ?>
+
+          <?php if ($template === 'news'): ?>
+            qwe
+          <?php endif ?>
         </div>
       </div>
 
