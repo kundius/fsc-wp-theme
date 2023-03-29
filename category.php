@@ -18,11 +18,13 @@
           <?php $template = get_field('template', 'category_' . get_queried_object_id()) ?>
 
           <?php if ($template === 'objects'): ?>
-            123
+          <div class="projects-layout">
+            objects
+          </div>
           <?php endif ?>
 
           <?php if ($template === 'news'): ?>
-            qwe
+            news
           <?php endif ?>
         </div>
       </div>
