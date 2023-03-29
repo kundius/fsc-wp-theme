@@ -121,7 +121,6 @@
           <?php endif ?>
 
           <?php if ($template === 'news'): ?>
-            news
           <?php endif ?>
         </div>
       </div>
