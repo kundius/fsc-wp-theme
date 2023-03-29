@@ -17,7 +17,6 @@
 
           <?php $template = get_field('template', 'category_' . get_queried_object_id()) ?>
 
-          <?php if ($template === 'objects'): ?>
           <?php
           $category = get_queried_object();
           $query_params = [
@@ -118,10 +117,6 @@
               <?php wp_pagenavi(['query' => $query]) ?>
             </div>
           </div>
-          <?php endif ?>
-
-          <?php if ($template === 'news'): ?>
-          <?php endif ?>
         </div>
       </div>
 
