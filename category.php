@@ -38,7 +38,6 @@
           $query = new WP_Query($query_params);
           $parent_id = $category->parent === 0 ? $category->term_id : $category->parent;
           $nav = get_term_children($parent_id, 'category');
-          print_r($query->posts);
           ?>
           <div class="projects-layout">
             <div class="projects-layout__nav">
@@ -48,7 +47,6 @@
                     <a href="<?php echo get_term_link($parent_id) ?>" class="projects-nav__link">Все</a>
                   </li>
                   <?php foreach ($nav as $child): $term = get_term_by('id', $child, 'category'); ?>
-                  <?php $nav->the_post() ?>
                   <li class="projects-nav__item<?php if ($category->term_id === $child): ?> projects-nav__item_active<?php endif ?>">
                     <a href="<?php echo get_term_link($term) ?>" class="projects-nav__link"><?php echo esc_html($term->name) ?></a>
                   </li>
