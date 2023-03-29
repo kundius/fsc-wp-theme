@@ -2296,6 +2296,11 @@
   bottom: 0;
 }
 
+.project-main {
+  padding-top: 73px;
+  padding-bottom: 116px;
+}
+
 .project-layout {}
 
 .project-layout__nav {
@@ -2347,6 +2352,14 @@
   line-height: 1.65;
   padding-bottom: 22px;
   border-bottom: 1px solid #dadada;
+}
+
+.project-details__content p {
+  margin: 0;
+}
+
+.project-details__content * + p {
+  margin-top: 24px;
 }
 
 .project-details__content h2 {
