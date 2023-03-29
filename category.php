@@ -15,7 +15,7 @@
             <h1 class="page-headline__title"><?php echo single_cat_title( '', false ) ?></h1>
           </div>
 
-          <?php $template = get_field('template') ?>
+          <?php $template = get_field('template', get_queried_object_id()) ?>
 
           <?php echo $template ?>
         </div>
