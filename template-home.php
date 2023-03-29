@@ -155,92 +155,44 @@ $service_pages = new WP_Query([
             <div class="home-projects-layout__section">
               <div class="home-projects-section">
                 <div class="home-projects-section__title">Наши объекты</div>
-                <div class="home-projects-section__date">с 2013 по 2020 годы</div>
-                <a href="#" class="home-projects-section__more">Смотреть все</a>
+                <div class="home-projects-section__date">с 2013 по 2023 годы</div>
+                <a href="/category/obekty" class="home-projects-section__more">Смотреть все</a>
               </div>
             </div>
             <div class="home-projects-layout__info">
               <div class="home-projects-info">
                 <div class="home-projects-info__title">
-                  Многофункциональный Распределительный Центр X5. 36 000 м2
+                  <?php echo get_the_title(301) ?>
                 </div>
                 <div class="home-projects-info__desc">
-                  Воронежская обл. Рамонский район, Айдаровское сельское поселение, Территория промышленная зона 4. II кв. 2014 г.- II кв. 2015
+                  <?php the_field('description', 301) ?>
                 </div>
               </div>
             </div>
+            <?php if ($gallery = get_field('gallery', 301)): ?>
             <div class="home-projects-layout__gallery">
               <div class="swiper projects-swiper-main">
                 <div class="swiper-wrapper">
+                  <?php foreach ($gallery as $item): ?>
                   <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
+                    <img src="<?php echo $item['sizes']['medium'] ?>" alt="<?php echo $item['alt'] ?>" />
                   </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
+                  <?php endforeach ?>
                 </div>
               </div>
               <div thumbsSlider class="swiper projects-swiper-thumbs">
                 <div class="swiper-wrapper">
+                  <?php foreach ($gallery as $item): ?>
                   <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
+                    <img src="<?php echo $item['sizes']['medium'] ?>" alt="<?php echo $item['alt'] ?>" />
                   </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="<?php bloginfo('template_url') ?>/dist/images/slide.png" />
-                  </div>
+                  <?php endforeach ?>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
               </div>
             </div>
+            <?php endif ?>
           </div>
         </div>
       </section>
