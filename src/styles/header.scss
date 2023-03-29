@@ -326,6 +326,7 @@
   color: #dce9fa;
 }
 
+.header__menu > .menu-item.current-category-ancestor > a,
 .header__menu > .menu-item.current-page-ancestor > a,
 .header__menu > .menu-item.current-menu-item > a,
 .header__menu > .menu-item > a:hover {
