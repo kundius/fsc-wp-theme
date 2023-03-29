@@ -76,7 +76,7 @@ $service_pages = new WP_Query([
       </div>
       <div class="footer__gap-1"></div>
       <div class="footer__map">
-        <a href="<?php the_permalink(297) ?>">Карта сайта</a>
+        <a href="<?php the_permalink(403) ?>">Карта сайта</a>
       </div>
       <div class="footer__gap-2"></div>
       <div class="footer__counters">
