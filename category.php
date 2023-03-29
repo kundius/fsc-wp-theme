@@ -15,6 +15,9 @@
             <h1 class="page-headline__title"><?php echo single_cat_title( '', false ) ?></h1>
           </div>
 
+          <?php $template = get_field('taxonomy_template') ?>
+
+          <?php echo $template ?>
         </div>
       </div>
 
