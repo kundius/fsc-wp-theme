@@ -3,32 +3,13 @@
 Template Name: Проект
 Template Post Type: post
 */
-$post_parent_id = wp_get_post_parent_id();
-$nav_parent_id = wp_get_post_parent_id(wp_get_post_parent_id());
-$nav = new WP_Query([
-  'post_type' => 'page',
-  'post_parent' => $nav_parent_id,
-  'order' => 'ASC',
-  'orderby' => 'menu_order',
-  'meta_key' => '_wp_page_template',
-  'meta_value' => 'template-projects.php'
-]);
-
-$projects_query = new WP_Query;
-$projects = $projects_query->query([
-  'post_type' => 'page',
-  'order' => 'ASC',
-  'orderby' => 'menu_order',
-  'meta_key' => '_wp_page_template',
-  'meta_value' => 'template-project.php'
-]);
-$pages = [];
-foreach ($projects as $page) {
-  $pages[] += $page->ID;
+$categories = get_the_category($post->ID);
+$category_ids = [];
+foreach ($categories as $individual_category) {
+  $category_ids[] = $individual_category->term_id;
 }
-$current = array_search(get_the_ID(), $pages);
-$prevID = $pages[$current-1];
-$nextID = $pages[$current+1];
+$prevID = get_previous_post();
+$nextID = get_next_post();
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes()?> itemscope itemtype="http://schema.org/WebSite">
@@ -54,16 +35,11 @@ $nextID = $pages[$current+1];
             <div class="project-layout__nav">
               <div class="projects-nav">
                 <ul class="projects-nav__list">
-                  <li class="projects-nav__item<?php if ($post_parent_id === $nav_parent_id): ?> projects-nav__item_active<?php endif ?>">
-                    <a href="<?php the_permalink($nav_parent_id) ?>" class="projects-nav__link">Все</a>
+                  <?php foreach ($category_ids as $category_id): $term = get_term_by('id', $category_id, 'category'); ?>
+                  <li class="projects-nav__item">
+                    <a href="<?php echo get_term_link($term) ?>" class="projects-nav__link"><?php echo esc_html($term->name) ?></a>
                   </li>
-                  <?php while ($nav->have_posts()): ?>
-                  <?php $nav->the_post() ?>
-                  <li class="projects-nav__item<?php if ($post_parent_id === get_the_ID()): ?> projects-nav__item_active<?php endif ?>">
-                    <a href="<?php the_permalink() ?>" class="projects-nav__link"><?php the_title() ?></a>
-                  </li>
-                  <?php endwhile ?>
-                  <?php wp_reset_postdata() ?>
+                  <?php endforeach; ?>
                 </ul>
               </div>
             </div>
