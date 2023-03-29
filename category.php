@@ -15,7 +15,7 @@
             <h1 class="page-headline__title"><?php single_cat_title() ?></h1>
           </div>
 
-          <?php $template = get_field('template', 'category_' . get_queried_object_id()) ?>
+          <?php // $template = get_field('template', 'category_' . get_queried_object_id()) ?>
 
           <?php
           $category = get_queried_object();
@@ -37,8 +37,10 @@
           $query = new WP_Query($query_params);
           $parent_id = $category->parent === 0 ? $category->term_id : $category->parent;
           $nav = get_term_children($parent_id, 'category');
+          $nav_enabled = false;
           ?>
           <div class="projects-layout">
+            <?php if (count($nav) > 0 && $nav_enabled): ?>
             <div class="projects-layout__nav">
               <div class="projects-nav">
                 <ul class="projects-nav__list">
@@ -53,6 +55,7 @@
                 </ul>
               </div>
             </div>
+            <?php endif ?>
 
             <div class="projects-layout__list">
               <div class="projects-list">
