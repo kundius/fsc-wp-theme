@@ -18,6 +18,7 @@
           <?php $template = get_field('template', get_queried_object_id()) ?>
 
           <?php echo $template ?>
+          <?php echo get_queried_object_id() ?>
         </div>
       </div>
 
