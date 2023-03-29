@@ -2,6 +2,7 @@
 /*
 Template Name: Новости
  */
+
 $nav = new WP_Query([
   'post_type' => 'page',
   'post_parent' => wp_get_post_parent_id() === 0 ? get_the_ID() : wp_get_post_parent_id(),
