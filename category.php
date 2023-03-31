@@ -59,32 +59,7 @@
 
             <div class="projects-layout__list">
               <div class="projects-list">
-                <?php $index = 0; foreach ($query->posts as $item): ?>
-                <?php if ($index === 0 && get_query_var('paged') == 0): ?>
-                <div class="projects-list__item projects-list__item_wide">
-                  <article class="projects-card-wide">
-                    <figure class="projects-card-wide__image">
-                      <img src="<?php echo get_the_post_thumbnail_url($item, 'theme-medium') ?>" alt="<?php echo get_the_title($item) ?>" />
-                    </figure>
-
-                    <?php if ($description = get_field('description', $item->ID)): ?>
-                    <div class="projects-card-wide__date"><?php echo $description ?></div>
-                    <?php endif ?>
-
-                    <div class="projects-card-wide__title">
-                      <?php echo get_the_title($item) ?>
-                    </div>
-
-                    <div class="projects-card-wide__excerpt">
-                      <?php echo \DomenART\Theme\Services\Theme::excerpt(['maxchar' => 160, 'text' => $item->post_excerpt ?: $item->post_content]) ?>
-                    </div>
-
-                    <div class="projects-card-wide__more">
-                      <a href="<?php the_permalink($item->ID) ?>" class="ui-button-more ui-button-more_with-arrow ui-button-more_upper">Подробнее</a>
-                    </div>
-                  </article>
-                </div>
-                <?php else: ?>
+                <?php foreach ($query->posts as $item): ?>
                 <div class="projects-list__item">
                   <article class="projects-card">
                     <figure class="projects-card__image">
@@ -99,20 +74,19 @@
                       <?php echo get_the_title($item) ?>
                     </div>
 
-                    <div class="projects-card__excerpt">
+                    <!-- <div class="projects-card__excerpt">
                       <?php echo \DomenART\Theme\Services\Theme::excerpt(['maxchar' => 400, 'text' => $item->post_excerpt ?: $item->post_content]) ?>
-                    </div>
+                    </div> -->
 
-                    <div class="projects-card__more">
+                    <!-- <div class="projects-card__more">
                       <a href="<?php the_permalink($item->ID) ?>" class="projects-card__more-link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="15" viewBox="0 0 25 15"><path d="M18 14.998v-6h-8v-3s5.38.021 8 0V0l6.068 7.95zm-13-9h3v3H5zm-5 0h3v3H0z"/>
                       </svg>
                     </a>
-                    </div>
+                    </div> -->
                   </article>
                 </div>
-                <?php endif ?>
-                <?php $index++; endforeach; ?>
+                <?php endforeach; ?>
               </div>
             </div>
     

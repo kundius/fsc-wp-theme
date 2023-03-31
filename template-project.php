@@ -32,6 +32,7 @@ $nextID = get_next_post();
           </div>
 
           <div class="project-layout">
+            <?php if (count($category_ids > 1)): ?>
             <div class="project-layout__nav">
               <div class="projects-nav">
                 <ul class="projects-nav__list">
@@ -43,6 +44,7 @@ $nextID = get_next_post();
                 </ul>
               </div>
             </div>
+            <?php endif ?>
 
             <div class="project-layout__details">
               <div class="project-details">
