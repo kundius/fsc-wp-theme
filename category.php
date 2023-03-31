@@ -71,7 +71,9 @@
                     <?php endif ?>
 
                     <div class="projects-card__title">
-                      <?php echo get_the_title($item) ?>
+                      <a href="<?php the_permalink($item->ID) ?>">
+                        <?php echo get_the_title($item) ?>
+                      </a>
                     </div>
 
                     <!-- <div class="projects-card__excerpt">

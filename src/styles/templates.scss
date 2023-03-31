@@ -2256,6 +2256,21 @@
   margin-top: 13px;
 }
 
+.projects-card__title a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.projects-card__title a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .projects-card__excerpt {
   color: #676767;
   font-size: 14px;
