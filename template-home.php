@@ -162,14 +162,14 @@ $service_pages = new WP_Query([
             <div class="home-projects-layout__info">
               <div class="home-projects-info">
                 <div class="home-projects-info__title">
-                  <?php echo get_the_title(301) ?>
+                  <?php echo get_the_title(382) ?>
                 </div>
                 <div class="home-projects-info__desc">
-                  <?php the_field('description', 301) ?>
+                  <?php the_field('description', 382) ?>
                 </div>
               </div>
             </div>
-            <?php if ($gallery = get_field('gallery', 301)): ?>
+            <?php if ($gallery = get_field('gallery', 382)): ?>
             <div class="home-projects-layout__gallery">
               <div class="swiper projects-swiper-main">
                 <div class="swiper-wrapper">
