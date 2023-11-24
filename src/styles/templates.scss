@@ -1926,6 +1926,11 @@
 .single-details {
   padding-top: 70px;
   padding-bottom: 70px;
+
+  @include below(sm) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .single-details__title {
