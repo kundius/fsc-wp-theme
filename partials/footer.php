@@ -105,7 +105,7 @@ $service_pages = new WP_Query([
     <div class="drawer__content">
       <div class="drawer-headline">
         <a href="/" class="drawer-headline__logo">
-          <img src="<?php bloginfo('template_url')?>/dist/images/logo.png" alt="<?php bloginfo('name')?>" />
+          <img src="<?php bloginfo('template_url')?>/dist/images/logo-small.png" alt="<?php bloginfo('name')?>" />
         </a>
         <a href="tel:<?php the_field('theme_phone', 'options') ?>" class="drawer-headline__feedback js-callback-or-modal">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
