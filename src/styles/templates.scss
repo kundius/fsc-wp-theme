@@ -1456,6 +1456,10 @@
   line-height: 1;
   margin-bottom: 12px;
   position: relative;
+
+  @include below(sm) {
+    font-size: 32px;
+  }
 }
 
 .page-headline__description {
@@ -1468,6 +1472,7 @@
 
 .contacts-layout {
   display: flex;
+  flex-wrap: wrap;
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
 }
 
@@ -1478,6 +1483,10 @@
   padding-left: 76px;
   padding-right: 76px;
   padding-bottom: 65px;
+
+  @include below(md) {
+    width: 100%;
+  }
 }
 
 .contacts-layout__form {
@@ -1487,6 +1496,10 @@
   padding-left: 76px;
   padding-right: 76px;
   padding-bottom: 65px;
+
+  @include below(md) {
+    width: 100%;
+  }
 }
 
 .contacts-content-container {}
@@ -1864,7 +1877,7 @@
 
 .about-nav__item {
   border-bottom: 2px solid #e6e6e6;
-  padding: 0 40px 9px;
+  padding: 10px 40px;
 }
 
 .about-nav__item_active .about-nav__link {
@@ -1915,7 +1928,7 @@
   margin-right: auto;
 
   @include below(sm) {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
 
@@ -2600,12 +2613,22 @@
   flex-wrap: wrap;
   margin-left: -40px;
   margin-top: -40px;
+
+  @include below(sm) {
+    margin-left: -16px;
+    margin-top: -16px;
+  }
 }
 
 .certificates-list__item {
   padding-top: 40px;
   padding-left: 40px;
   width: 50%;
+
+  @include below(sm) {
+    padding-top: 16px;
+    padding-left: 16px;
+  }
 }
 
 .certificates-card {
@@ -2616,6 +2639,13 @@
   background-color: #ffffff;
   transition: .5s ease;
   transition-property: box-shadow, transform;
+
+  @include below(md) {
+    padding: 24px;
+  }
+  @include below(sm) {
+    padding: 12px;
+  }
 }
 
 .certificates-card:hover {
@@ -2680,6 +2710,7 @@
 .service-layout__content {
   margin: 0 auto;
   width: 750px;
+  max-width: 100%;
 }
 
 .service-details {
@@ -3169,6 +3200,10 @@
 .page-about-layout__subtitle {
   margin-left: 205px;
   margin-top: 50px;
+
+  @include below(md) {
+    margin-left: 0;
+  }
 }
 
 .page-about-layout__object {
@@ -3187,18 +3222,30 @@
   color: #1a192e;
   font-size: 32px;
   font-weight: 700;
-  line-height: 41px;
+  line-height: 1.25;
+
+  @include below(sm) {
+    font-size: 20px;
+  }
 }
 
 .about-subtitle:first-line {
   font-size: 36px;
   text-transform: uppercase;
+
+  @include below(sm) {
+    font-size: 24px;
+  }
 }
 
 .about-object {
   display: flex;
   align-items: center;
   gap: 45px;
+
+  @include below(md) {
+    flex-wrap: wrap;
+  }
 }
 
 .about-object__image {
@@ -3231,6 +3278,10 @@
   display: flex;
   align-items: center;
   gap: 45px;
+
+  @include below(md) {
+    flex-wrap: wrap;
+  }
 }
 
 .about-proposal__title {
@@ -3243,6 +3294,11 @@
   padding: 51px;
   position: relative;
   flex: 1 1 50%;
+
+  @include below(sm) {
+    font-size: 20px;
+    padding: 20px;
+  }
 }
 
 .about-proposal__title::after {
@@ -3275,6 +3331,13 @@
 .about-benefits {
   display: flex;
   gap: 70px;
+
+  @include below(lg) {
+    gap: 30px;
+  }
+  @include below(md) {
+    flex-wrap: wrap;
+  }
 }
 
 .about-benefits-item {
@@ -3287,6 +3350,10 @@
   padding-right: 12px;
   padding-bottom: 32px;
   flex: 1 1 0;
+
+  @include below(md) {
+    flex: 1 1 calc(50% - 15px);
+  }
 }
 
 .about-benefits-item__num {
@@ -3305,6 +3372,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include below(sm) {
+    width: 60px;
+    height: 60px;
+    font-size: 36px;
+    top: -20px;
+    margin-left: -30px;
+  }
 }
 
 .about-benefits-item__icon {
