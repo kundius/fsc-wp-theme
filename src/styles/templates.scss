@@ -2005,6 +2005,7 @@
 .related__grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-left: -40px;
   margin-top: -40px;
 
@@ -2022,6 +2023,7 @@
   @include below(md) {
     padding-left: 16px;
     padding-top: 16px;
+    width: calc(100% / 2);
   }
   @include below(sm) {
     width: calc(100% / 1);
