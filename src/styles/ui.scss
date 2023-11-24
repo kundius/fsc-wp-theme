@@ -661,6 +661,10 @@ body {
     list-style: none;
     padding: 0 0 0 90px;
     margin: 0;
+
+    @include below(sm) {
+      padding-left: 0;
+    }
   }
 
   * + ul {
