@@ -1903,7 +1903,7 @@
   color: #222222;
   font-size: 35px;
   font-weight: 700;
-  line-height: 47.04px;
+  line-height: 1.25;
   text-align: center;
   margin-top: 0;
   padding-bottom: 30px;
@@ -1913,6 +1913,10 @@
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+
+  @include below(sm) {
+    font-size: 24px;
+  }
 }
 
 .single-details__title::after {
@@ -2148,6 +2152,16 @@
   padding-left: 40px;
   padding-top: 80px;
   width: 25%;
+
+  @include below(lg) {
+    width: 33.33%;
+  }
+  @include below(md) {
+    width: 50%;
+  }
+  @include below(sm) {
+    width: 100%;
+  }
 }
 
 .projects-list__item_wide {
@@ -2346,6 +2360,10 @@
   padding-left: 50px;
   padding-top: 50px;
   width: 50%;
+
+  @include below(md) {
+    width: 100%;
+  }
 }
 
 .project-details__image img {
@@ -2439,6 +2457,10 @@
   padding-left: 50px;
   padding-top: 50px;
   width: 50%;
+
+  @include below(sm) {
+    width: 100%;
+  }
 }
 
 .project-gallery-card {
