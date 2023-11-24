@@ -3392,9 +3392,6 @@
   display: flex;
   gap: 70px;
 
-  @include below(lg) {
-    gap: 30px;
-  }
   @include below(md) {
     flex-wrap: wrap;
   }
@@ -3412,7 +3409,7 @@
   flex: 1 1 0;
 
   @include below(md) {
-    flex: 1 1 calc(50% - 15px);
+    flex: 1 1 calc(50% - 35px);
   }
 }
 
@@ -3432,14 +3429,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @include below(sm) {
-    width: 60px;
-    height: 60px;
-    font-size: 36px;
-    top: -20px;
-    margin-left: -30px;
-  }
 }
 
 .about-benefits-item__icon {
