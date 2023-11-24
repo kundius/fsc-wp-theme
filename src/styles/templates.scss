@@ -2000,6 +2000,11 @@
   line-height: 1;
   text-align: center;
   margin-bottom: 47px;
+
+  @include below(md) {
+    margin-bottom: 32px;
+    font-size: 24px;
+  }
 }
 
 .related__grid {
