@@ -228,6 +228,9 @@
   border: none;
   cursor: pointer;
 
+  @include below(lg) {
+    display: none;
+  }
   @include below(sm) {
     display: inline-flex;
     margin-right: 0;
@@ -298,6 +301,10 @@
 
 .header__menu > .menu-item + .menu-item {
   margin-left: 12px;
+  
+  @include below(lg) {
+    margin-left: 0;
+  }
 }
 
 .header__menu > .menu-item > a {
