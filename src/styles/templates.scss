@@ -2007,18 +2007,35 @@
   flex-wrap: wrap;
   margin-left: -40px;
   margin-top: -40px;
+
+  @include below(md) {
+    margin-left: -16px;
+    margin-top: -16px;
+  }
 }
 
 .related__grid-cell {
   padding-left: 40px;
   padding-top: 40px;
   width: calc(100% / 3);
+  
+  @include below(md) {
+    padding-left: 16px;
+    padding-top: 16px;
+  }
+  @include below(sm) {
+    width: calc(100% / 1);
+  }
 }
 
 .related-card {
   position: relative;
   z-index: 1;
   padding: 50px 44px 44px 44px;
+
+  @include below(md) {
+    padding: 16px;
+  }
 }
 
 .related-card::after {
