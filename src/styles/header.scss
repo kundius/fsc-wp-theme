@@ -99,9 +99,9 @@
     margin-right: auto;
   }
 
-  @include below(sm) {
-    width: 144px;
-  }
+  // @include below(sm) {
+  //   width: 144px;
+  // }
 }
 
 .header-logo__link {
