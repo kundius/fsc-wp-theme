@@ -1406,6 +1406,11 @@
 .page-main {
   padding-top: 73px;
   padding-bottom: 116px;
+
+  @include below(sm) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .page-main_service {
