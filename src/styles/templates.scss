@@ -2040,7 +2040,13 @@
   z-index: 1;
   padding: 50px 44px 44px 44px;
 
+  @include below(lg) {
+    padding: 32px;
+  }
   @include below(md) {
+    padding: 24px;
+  }
+  @include below(sm) {
     padding: 16px;
   }
 }
