@@ -522,6 +522,9 @@
   // .page_slideshow .header_fixed & {
   //   top: -10px;
   // }
+  @media (max-width: 479px) {
+    right: -280px;
+  }
 }
 
 .header_new_year_middle_top_1 {
