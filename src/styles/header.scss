@@ -410,3 +410,131 @@
   color: #163051;
   background: #dbeff9;
 }
+
+.header_new_year_left_top_1 {
+  position: absolute;
+  left: 0;
+  top: -163px;
+  width: 297px;
+  height: 600px;
+  z-index: 10;
+  pointer-events: none;
+  background: url("../images/ng-left-top-2-red.png") no-repeat 50% 50%;
+  background-size: contain;
+  // .header_fixed & {
+  //   top: -95px;
+  // }
+  // .page_slideshow & {
+  //   top: -210px;
+  // }
+  // .page_slideshow .header_fixed & {
+  //   top: -95px;
+  // }
+  @media (max-width: 1576px) {
+    left: auto;
+    right: calc(50vw + 474px);
+  }
+  @media (max-width: $breakpoint-medium-max) {
+    right: auto;
+    left: -156px;
+    // .header_fixed & {
+    //   top: -108px;
+    // }
+    // .page_slideshow .header_fixed & {
+    //   top: -108px;
+    // }
+  }
+}
+
+.header_new_year_right_top_1 {
+  position: absolute;
+  right: -88px;
+  top: -163px;
+  width: 529px;
+  height: 600px;
+  z-index: 10;
+  pointer-events: none;
+  background: url("../images/ng-right-top-2-red.png") no-repeat 50% 50%;
+  background-size: contain;
+  // .header_fixed & {
+  //   top: -95px;
+  // }
+  // .page_slideshow & {
+  //   top: -210px;
+  // }
+  // .page_slideshow .header_fixed & {
+  //   top: -95px;
+  }
+  @media (max-width: 2000px) {
+    right: auto;
+    left: calc(50vw + 550px);
+  }
+  @media (max-width: $breakpoint-medium-max) {
+    left: auto;
+    right: -444px;
+    // .header_fixed & {
+    //   top: -108px;
+    // }
+    // .page_slideshow .header_fixed & {
+    //   top: -108px;
+    // }
+  }
+}
+
+.header_new_year_left_top_2 {
+  background: url("../images/ng-left-top-1-red.png") no-repeat 50% 50%;
+  width: 428px;
+  height: 518px;
+  position: absolute;
+  top: -10px;
+  left: -410px;
+  pointer-events: none;
+  // .header_fixed & {
+  //   top: -10px;
+  // }
+  // .page_slideshow & {
+  //   top: -57px;
+  // }
+  // .page_slideshow .header_fixed & {
+  //   top: -10px;
+  // }
+}
+
+.header_new_year_right_top_2 {
+  background: url("../images/ng-right-top-1.png") no-repeat;
+  width: 398px;
+  height: 126px;
+  position: absolute;
+  top: -10px;
+  right: -390px;
+  pointer-events: none;
+  // .header_fixed & {
+  //   top: -10px;
+  // }
+  // .page_slideshow & {
+  //   top: -57px;
+  // }
+  // .page_slideshow .header_fixed & {
+  //   top: -10px;
+  // }
+}
+
+.header_new_year_middle_top_1 {
+  background: url("../images/ng-middle-top-1.png") no-repeat;
+  height: 42px;
+  position: absolute;
+  pointer-events: none;
+  left: 50%;
+  top: -10px;
+  width: 133px;
+  transform: translateX(-50%);
+  // .header_fixed & {
+  //   top: -10px;
+  // }
+  // .page_slideshow & {
+  //   top: -57px;
+  // }
+  // .page_slideshow .header_fixed & {
+  //   top: -10px;
+  // }
+}

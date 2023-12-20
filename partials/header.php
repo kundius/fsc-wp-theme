@@ -1,5 +1,15 @@
 <section class="header">
+  <?php if (is_new_year()): ?>
+  <div class="header_new_year_left_top_1"></div>
+  <div class="header_new_year_right_top_1"></div>
+  <?php endif; ?>
+
   <div class="ui-container header__container">
+    <?php if (is_new_year()): ?>
+    <div class="header_new_year_left_top_2"></div>
+    <div class="header_new_year_right_top_2"></div>
+    <div class="header_new_year_middle_top_1"></div>
+    <?php endif; ?>
     
     <button class="header__toggle">
       <span></span>
